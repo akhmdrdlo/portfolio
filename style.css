@@ -42,12 +42,12 @@ body {
     transform: translatex(0);
   }
 
-  .about-me h3,.about-me ul li {
+  .about-me.show h3,.about-me.show ul li {
     opacity: 0;
     animation: slide-up-h3 1s ease forwards 0.75s;
   }
 
-  .about-me p {
+  .about-me.show p {
     opacity: 0;
     animation: slide-up-p 1s ease forwards 1s;
   }
@@ -83,8 +83,8 @@ body {
     justify-content: center;
     flex-direction: column;
     opacity: 0;
-    transform: translatex(-50px);
-    transition: opacity 0.5s, transform 0.5s;
+    transform: translatex(50px);
+    transition: opacity 0.5s, transform 0.75s;
   }
 
   .skill.show {
@@ -92,14 +92,13 @@ body {
     transform: translatex(0);
   }
 
-  .skill h3,#backend,#video,#desain {
+  .skill.show div#backend,.skill.show div#video,.skill.show div#desain {
     opacity: 0;
-    animation: slide-right-h3 1s ease forwards 0.75s;
+    animation: slide-right-p 1s ease forwards 1.0s;
   }
-
-  .skill .progress,#frontend,#foto,#office {
+  .skill.show div#office,.skill.show div#frontend,.skill.show div#foto {
     opacity: 0;
-    animation: slide-right-p 1s ease forwards 1.50s;
+    animation: slide-right-h3 1s ease forwards 0.5s;
   }
 
   @keyframes slide-right-h3 {
@@ -126,7 +125,7 @@ body {
 
   /* skill bar */
   .skill-card {
-    max-width: 400px;
+    max-width: 600px;
     margin: 5px auto;
   }
 
@@ -135,6 +134,7 @@ body {
     margin-bottom: 5px;
   }
 
-  .skill-bar {
-    height: 25px;
+  .skill-desc {
+    font-size: 11px;
+    margin-bottom: 5px;
   }
