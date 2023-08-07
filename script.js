@@ -21,3 +21,25 @@ function handleScroll() {
   }
 
   window.addEventListener('scroll', handleScroll);
+
+  //Bagian Portofolio
+  const filterButtons = document.querySelectorAll('.filter-btn');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.getAttribute('data-filter');
+
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      button.classList.add('active');
+
+      const portfolioItems = document.querySelectorAll('.portfolio .col');
+      portfolioItems.forEach(item => {
+        item.style.display = 'none';
+        if (filterValue === 'all' || item.classList.contains(filterValue)) {
+          item.style.display = 'block';
+        }
+      });
+    });
+  });

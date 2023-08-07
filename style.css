@@ -138,3 +138,33 @@ body {
     font-size: 11px;
     margin-bottom: 5px;
   }
+/* 
+Bagian portofolio */
+.filter-bg {
+  background-color: rgb(197, 197, 197);
+  padding: 2px;
+  display: flex;
+  justify-content: center;                                                                                                                                                                                        
+}
+
+.filter-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1fac65fd;
+  color: #fff;
+  border: none;
+  margin: 2px;
+  cursor: pointer;
+  transition: transform 0.75s;
+}
+
+.filter-btn:hover {
+  background-color: #005028fd;
+  transform: translateY(5px);
+  transition: ease-in-out 0.5s;
+}
+
+.filter-btn.active {
+  background-color: #16663efd;
+  transform: translateY(10px);
+}

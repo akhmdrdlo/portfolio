@@ -39,7 +39,7 @@
     <div class="bg-gambar">
         <div class="overlay">
             <img src="muka.jpg" alt="Avatar Logo" style="width:175px;" class="rounded-pill border">
-          <h1>Selamat Datang!!</h1>
+          <h1>Yo Hello!!</h1>
           <p>Perkenalkan nama saya Akhmad Ridlo Rifa'i yang berkeinginan untuk menjadi seorang Web Developer, Data Analyst, Fotografer serta Content Creator di masa mendatang!!</p>
         </div>
     </div>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-            </div>        
+            </div>
         </div>
         <hr>
         <div class="skill col-md-12 px-4" id="skill">
@@ -86,7 +86,7 @@
                             <p class="skill-desc">
                                 Mengetahui dasar-dasar dari bahasa HTML,CSS dan Javascript dalam membangun website<br>
                                 Mampu membuat sebuah website sederhana menggunakan Native language dari 0<br>
-                                Mampu memahami proses developing website menggunakan Framework lanjutan
+                                Mampu memahami proses developing website menggunakan Framework lanjutan (Bootstrap,NodeJS)
                             </p>
                         </div>
                     </div>
@@ -136,6 +136,7 @@
                             <h3 class="skill-title">Office (Word,Excel,PowerPoint)</h3>
                             <p class="skill-desc">
                                 Memahami dasar-dasar penggunaan Microsoft Office<br>
+                                Memahami rumus dan penggunaan lanjutan dari Microsoft Office<br>
                                 Memahami sedikit tentang layout dalam penulisan karya ilmiah<br>
                                 Memiliki kemampuan parafrase yang mumpuni dalam hal penulisan<br>
                                 Memiliki kemampuan untuk mengetik secara cepat (diatas 65WPM)
@@ -149,7 +150,9 @@
                             <h3 class="skill-title">Desain Grafis</h3>
                             <p class="skill-desc">
                                 Memahami konsep dasar dalam dunia desain grafis<br>
+                                Memiliki ide dan kreativitas yang mumpuni dalam membuat sebuah layout<br>
                                 Memiliki kemampuan dalam mengoperasikan software Adobe Illustrator maupun CorelDRAW<br>
+                                Memiliki kemampuan dalam mengoperasikan website ilustrasi seperti Figma dan Canva<br>
                                 Memiliki media portofolio yang bisa dilihat <a href="">disini</a>
                             </p>
                         </div>
@@ -159,8 +162,57 @@
         </div>
         <hr>
         <div class="portfolio col-md-12 px-4" id="portfolio">
-            <div class="portfolio-card card col-sm-4">
-                <img src="" alt="" srcset="">
+        <!-- Filter Bar -->
+        <div class="btn-group mb-3 align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
+            <button type="button" class="btn btn-primary filter-btn" data-filter="fotografi">Fotografi</button>
+            <button type="button" class="btn btn-primary filter-btn" data-filter="design">Desain Grafis</button>
+            <button type="button" class="btn btn-primary filter-btn" data-filter="video">Video</button>
+        </div>
+    
+        <!-- Portofolio Items -->
+        <div class="row row-cols-1 row-cols-md-4 g-4 portfolio">
+            <!-- Portofolio Item 1 -->
+            <div class="col fotografi"> 
+            <div class="card">
+                <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
+                <div class="card-body">
+                <h5 class="card-title">Portofolio 1</h5>
+                <p class="card-text">Deskripsi portofolio 1 (Fotografi).</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Portofolio Item 2 -->
+            <div class="col design">
+            <div class="card">
+                <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
+                <div class="card-body">
+                <h5 class="card-title">Portofolio 2</h5>
+                <p class="card-text">Deskripsi portofolio 2 (Desain Grafis).</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Portofolio Item 3 -->
+            <div class="col video">
+            <div class="card">
+                <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
+                <div class="card-body">
+                <h5 class="card-title">Portofolio 3</h5>
+                <p class="card-text">Deskripsi portofolio 3 (Video).</p>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Portofolio Item 4 -->
+            <div class="col fotografi">
+            <div class="card">
+                <img src="path/to/image4.jpg" class="card-img-top" alt="Image 4">
+                <div class="card-body">
+                <h5 class="card-title">Portofolio 4</h5>
+                <p class="card-text">Deskripsi portofolio 4 (Fotografi).</p>
+                </div>
+            </div>
             </div>
         </div>
 

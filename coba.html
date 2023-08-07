@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio dengan Filter dan Animasi</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .btn-group {
+      transition: transform 0.5s;
+    }
+
+    .btn-group.active {
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Portofolio</h2>
+
+    <!-- Filter Bar -->
+    <div class="btn-group mb-3" role="group" aria-label="Filter Portofolio">
+      <button type="button" class="btn btn-primary filter-btn" data-filter="all">Semua</button>
+      <button type="button" class="btn btn-primary filter-btn" data-filter="fotografi">Fotografi</button>
+      <button type="button" class="btn btn-primary filter-btn" data-filter="design">Desain Grafis</button>
+      <button type="button" class="btn btn-primary filter-btn" data-filter="video">Video</button>
+    </div>
+
+    <!-- Portofolio Items -->
+    <div class="row row-cols-1 row-cols-md-4 g-4 portfolio">
+      <!-- Portofolio Item 1 -->
+      <div class="col fotografi">
+        <div class="card">
+          <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Portofolio 1</h5>
+            <p class="card-text">Deskripsi portofolio 1 (Fotografi).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portofolio Item 2 -->
+      <div class="col design">
+        <div class="card">
+          <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Portofolio 2</h5>
+            <p class="card-text">Deskripsi portofolio 2 (Desain Grafis).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portofolio Item 3 -->
+      <div class="col video">
+        <div class="card">
+          <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Portofolio 3</h5>
+            <p class="card-text">Deskripsi portofolio 3 (Video).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portofolio Item 4 -->
+      <div class="col fotografi">
+        <div class="card">
+          <img src="path/to/image4.jpg" class="card-img-top" alt="Image 4">
+          <div class="card-body">
+            <h5 class="card-title">Portofolio 4</h5>
+            <p class="card-text">Deskripsi portofolio 4 (Fotografi).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filterValue = button.getAttribute('data-filter');
+
+        filterButtons.forEach(btn => {
+          btn.classList.remove('active');
+        });
+        button.classList.add('active');
+
+        const portfolioItems = document.querySelectorAll('.portfolio .col');
+        portfolioItems.forEach(item => {
+          item.style.display = 'none';
+          if (filterValue === 'all' || item.classList.contains(filterValue)) {
+            item.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
