@@ -18,6 +18,16 @@ function handleScroll() {
     } else {
       skill.classList.remove('show');
     }
+
+    var portfolio = document.querySelector('.portfolio');
+    var portfolioPosition = window.pageYOffset;
+    var windowHeight = window.innerHeight;
+
+    if (portfolioPosition > (portfolio.offsetTop - windowHeight + 100)) {
+      portfolio.classList.add('show');
+    } else {
+      portfolio.classList.remove('show');
+    }
   }
 
   window.addEventListener('scroll', handleScroll);
@@ -43,3 +53,10 @@ function handleScroll() {
       });
     });
   });
+
+window.addEventListener('scroll', handleScroll);
+
+function showImage(src) {
+  const largeImage = document.getElementById('largeImage');
+  largeImage.src = src;
+}

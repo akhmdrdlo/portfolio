@@ -9,12 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
-    <nav class="navbar bg-gradient bg-success navbar-dark font-weight-bolder fixed-top">
+    <nav class="navbar navbar-dark font-weight-bolder fixed-top" style="background-color: #148dbd;">
         <div class="container-fluid">
-            <a href="" class="navbar-brand">
-                <img src="muka.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill border">
-            </a>
-            <span class="navbar-text text-white h5 text-uppercase"> Akhmad Ridlo</span>
+            <span class="navbar-text text-white h5 text-uppercase px-4"> Akhmad Ridlo</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,7 +24,7 @@
                         <a href="#skill" class="nav-link">Skill</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Riwayat</a>
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Kontak Saya</a>
@@ -40,18 +37,19 @@
         <div class="overlay">
             <img src="muka.jpg" alt="Avatar Logo" style="width:175px;" class="rounded-pill border">
           <h1>Yo Hello!!</h1>
-          <p>Perkenalkan nama saya Akhmad Ridlo Rifa'i yang berkeinginan untuk menjadi seorang Web Developer, Data Analyst, Fotografer serta Content Creator di masa mendatang!!</p>
+          <p class="mx-5">Perkenalkan nama saya Akhmad Ridlo Rifa'i yang berkeinginan untuk menjadi seorang Web Developer, Data Analyst, Fotografer serta Content Creator di masa mendatang!!</p>
         </div>
     </div>
     <div class="container">
         <div class="about-me col-md-12 px-4" id="about">
-            <h3 class="text-success font-weight-bolder">TENTANG SAYA</h3>
+            <h3 class="text-primary font-weight-bolder">TENTANG SAYA</h3>
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="muka.jpg" style="width:500px" class="border img-fluid">
+                    <img src="blob1.png" style="width: 400px;" srcset="">
+                    <img src="muka1.png" style="width:500px; margin-top: -400px;" class=" img-fluid">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    <h4 class="text-success font-weight-bolder text-center">Mahasiswa & Freelancer</h4>
+                    <h4 class="text-primary font-weight-bolder text-center">Mahasiswa & Freelancer</h4>
                     <p style="text-align:justify;">Nama saya adalah Akhmad Ridlo Rifa'i, Anak pertama dari 3 bersaudara yang memiliki mimpi berkeliling dunia untuk memotret setiap sudut dunia. 
                         Saya merupakan orang yang gemar mempelajari hal baru terutama dalam ranah teknologi dan multimedia. Saya mudah beradaptasi dengan lingkungan dan dapat bekerja secara individu maupun dalam sebuah tim.
                     </p>
@@ -77,7 +75,7 @@
         </div>
         <hr>
         <div class="skill col-md-12 px-4" id="skill">
-            <h3 class="text-success">SKILL</h3>
+            <h3 class="text-primary">SKILL</h3>
             <div class="row">
                 <div class="col-lg-4" id="frontend">
                     <div class="skill-card card">
@@ -162,60 +160,178 @@
         </div>
         <hr>
         <div class="portfolio col-md-12 px-4" id="portfolio">
+        <h3 class="text-primary text-center">PORTOFOLIO</h3>
         <!-- Filter Bar -->
-        <div class="btn-group mb-3 align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
-            <button type="button" class="btn btn-primary filter-btn" data-filter="fotografi">Fotografi</button>
-            <button type="button" class="btn btn-primary filter-btn" data-filter="design">Desain Grafis</button>
-            <button type="button" class="btn btn-primary filter-btn" data-filter="video">Video</button>
-        </div>
-    
-        <!-- Portofolio Items -->
-        <div class="row row-cols-1 row-cols-md-4 g-4 portfolio">
-            <!-- Portofolio Item 1 -->
-            <div class="col fotografi"> 
-            <div class="card">
-                <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
-                <div class="card-body">
-                <h5 class="card-title">Portofolio 1</h5>
-                <p class="card-text">Deskripsi portofolio 1 (Fotografi).</p>
-                </div>
+        <div class="btn-group col-sm-12">
+            <div class="btn mb-4 col-sm-6 align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
+                <button type="button" class="btn btn-primary filter-btn" data-filter="fotografi">Fotografi</button>
             </div>
+            <div class="btn mb-4 col-sm-6 align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
+                <button type="button" class="btn btn-primary filter-btn" data-filter="website">Website</button>
+            </div>
+        </div>
+        <!-- Portofolio Items -->
+        <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+            <!-- Portofolio Item 1 -->
+            <div class="col fotografi" id="p1">
+                <div class="portfolio-card">
+                  <img src="img/portofolio/agustus1.JPG" class="portfolio-image" alt="Image 1">
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/agustus1.jpg')">
+                    <h5>Chasing the Flag</h5>
+                    <p>Lomba Bendera - Agustusan 2022</p>
+                  </div>
+                </div>
             </div>
     
             <!-- Portofolio Item 2 -->
-            <div class="col design">
-            <div class="card">
-                <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
-                <div class="card-body">
-                <h5 class="card-title">Portofolio 2</h5>
-                <p class="card-text">Deskripsi portofolio 2 (Desain Grafis).</p>
+            <div class="col fotografi" id="p2">
+                <div class="portfolio-card">
+                  <img src="img/portofolio/agustus2.JPG" class="portfolio-image" alt="Image 2">
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/agustus2.jpg')">
+                    <h5>A Girl and 'Kerupuk'</h5>
+                    <p>Lomba Kerupuk - Agustusan 2022</p>
+                  </div>
                 </div>
             </div>
-            </div>
-    
             <!-- Portofolio Item 3 -->
-            <div class="col video">
-            <div class="card">
-                <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
-                <div class="card-body">
-                <h5 class="card-title">Portofolio 3</h5>
-                <p class="card-text">Deskripsi portofolio 3 (Video).</p>
+            <div class="col fotografi" id="p3">
+                <div class="portfolio-card">
+                  <img src="img/portofolio/best.jpg" class="portfolio-image"  alt="Image 3">
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/best.jpg')">
+                    <h5>Sillhoutte Sunset</h5>
+                    <p>Siluet di depan danau buatan</p>
+                  </div>
                 </div>
-            </div>
             </div>
     
             <!-- Portofolio Item 4 -->
-            <div class="col fotografi">
-            <div class="card">
-                <img src="path/to/image4.jpg" class="card-img-top" alt="Image 4">
-                <div class="card-body">
-                <h5 class="card-title">Portofolio 4</h5>
-                <p class="card-text">Deskripsi portofolio 4 (Fotografi).</p>
+            <div class="col fotografi" id="p4" >
+                <div class="portfolio-card">
+                  <img src="img/portofolio/frame.jpg" class="portfolio-image" alt="Image 4">
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/frame.jpg')">
+                    <h5>Pray on Frame</h5>
+                    <p>Implementasi teknik Framing</p>
+                  </div>
                 </div>
             </div>
+
+            <!-- Portofolio Item 5 -->
+            <div class="col fotografi" id="p5" >
+                <div class="portfolio-card">
+                  <img src="img/portofolio/lowlight.jpg" class="portfolio-image" alt="Image 5">
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/lowlight.jpg')">
+                    <h5>Lay Low Bussiness</h5>
+                    <p>Implementasi Low-light shoot di Indoor</p>
+                  </div>
+                </div>
+            </div>
+
+           <!-- Portofolio Item 6 -->
+            <div class="col fotografi" id="p6">
+                <div class="portfolio-card">
+                  <img src="img/portofolio//lowlight2.jpg" class="portfolio-image"  alt="Image 6" >
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/lowlight2.jpg')">
+                    <h5>Getting ready</h5>
+                    <p>Implementasi Low-light shoot di Outdoor</p>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Portofolio Item 7 -->
+            <div class="col fotografi" id="p7">
+                <div class="portfolio-card">
+                  <img src="img/portofolio/lowlight3.jpg" class="portfolio-image"  alt="Image 7" >
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/lowlight3.jpg')">
+                    <h5>Nightscape on Bandung</h5>
+                    <p>Low-light panorama di bukit Manglayang</p>
+                  </div>
+                </div>
+            </div>
+            <!-- Portofolio Item 8 -->
+            <div class="col fotografi" id="p8">
+                <div class="portfolio-card">
+                  <img src="img/portofolio/panorama.jpg" class="portfolio-image"  alt="Image 8" >
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/panorama.jpg')">
+                    <h5>Sunrise on Bandung</h5>
+                    <p>Indahnya matahari terbit di bukit Manglayang</p>
+                  </div>
+                </div>
+            </div>
+             <!-- Portofolio Item 9 -->
+            <div class="col fotografi" id="p9" >
+                <div class="portfolio-card">
+                  <img src="img/portofolio/art.jpg" class="portfolio-image" alt="Image 9" >
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/art.jpg')">
+                    <h5>Art on Selection</h5>
+                    <p>PMB Jalur Prestasi Kaligrafi UIN SGD Bandung</p>
+                  </div>
+                </div>
+            </div>
+            <!-- Portofolio Item 10 -->
+            <div class="col fotografi" id="p10" >
+                <div class="portfolio-card">
+                  <img src="img/portofolio/fast.jpg" class="portfolio-image"alt="Image 10" >
+                  <div class="portfolio-description text-center"data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/fast.jpg')">
+                    <h5>Tire-d of Bumpy</h5>
+                    <p>Foto dengan shutter cepat dengan fokus speedbump</p>
+                  </div>
+                </div>
+            </div>
+            <!-- Portofolio Item 11 -->
+            <div class="col fotografi" id="p11">
+                <div class="portfolio-card">
+                  <img src="img/portofolio/tea.jpg" class="portfolio-image" alt="Image 11" >
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/tea.jpg')">
+                    <h5>Freshly Picked Tea</h5>
+                    <p>Pucuk teh dari Kebun Teh Lembang</p>
+                  </div>
+                </div>
+            </div>
+            <!-- Portofolio Item 12 -->
+            <div class="col fotografi" id="p12">
+                <div class="portfolio-card">
+                  <img src="img/portofolio/scary.jpg" class="portfolio-image" alt="Image 12" >
+                  <div class="portfolio-description text-center" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/scary.jpg')">
+                    <h5>Dying Mister Mist</h5>
+                    <p>Kabut di tengah hutan Manglayang</p>
+                  </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4 col-lg-10 justify-content-center mx-auto">
+                <!-- Portofolio Website 1 -->
+                <div class="col col-lg-6 website" id="w1">
+                    <div class="card">
+                    <img src="img/portofolio/perpus1.png" class="card-image"  alt="website 1"  data-bs-toggle="modal" data-bs-target="#imageModal" onclick="showImage('img/portofolio/perpus1.png')">
+                    <div class="card-body text-center" >
+                        <h5 class="card-title">E-Librarie</h5>
+                        <p>Sistem Manajemen Perpustakaan Digital dengan basis Bootstrap 4 dan Native PHP</p>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Portofolio Website 2 -->
+                <div class="col col-lg-6 website" id="w2">
+                    <div class="card">
+                    <img src="img/portofolio/gudang1.png" class="card-image" alt="website 2" data-bs-target="#imageModal" data-bs-toggle="modal" onclick="showImage('img/portofolio/gudang1.png')">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">V-Warehouse</h5>
+                        <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 8</p>
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
-
+        </div>
+        <!-- Modal Gallery-->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg text-center">
+              <div class="modal-body text-center">
+                <!-- Large image to display -->
+                <img src="" class="img-fluid img-hd" id="largeImage" alt="Large Image">
+              </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
     <script src="script.js"></script>
