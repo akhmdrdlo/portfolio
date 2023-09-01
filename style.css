@@ -5,7 +5,7 @@
   
 body {
     font-family: 'montserrat';
-    padding-top: 65px;
+    padding-top: 55px;
 }
 .bg-gambar {
     background-image: url('bggede.png');
@@ -245,7 +245,7 @@ Bagian portofolio */
   @keyframes slide-right-1{
     0% {
       opacity: 0;
-      transform: translateX(-75px);
+      transform: translateX(15px);
     }
     100% {
       opacity: 1;
@@ -256,7 +256,7 @@ Bagian portofolio */
   @keyframes slide-left-1 {
     0% {
       opacity: 0;
-      transform: translatex(75px);
+      transform: translatex(-15px);
     }
     100% {
       opacity: 1;
@@ -267,7 +267,7 @@ Bagian portofolio */
   @keyframes slide-right-2 {
     0% {
       opacity: 0;
-      transform: translatex(-75px);
+      transform: translatex(75px);
     }
     100% {
       opacity: 1;
@@ -278,10 +278,79 @@ Bagian portofolio */
   @keyframes slide-left-2 {
     0% {
       opacity: 0;
-      transform: translatex(75px);
+      transform: translatex(-75px);
     }
     100% {
       opacity: 1;
       transform: translatex(0);
     }
   }
+
+  #kontak {
+    background-color: rgb(44, 44, 44);
+    color: white;
+  }
+
+    /* bagian skill */
+    .kontak {
+      width:100%;
+      padding-top: 25px;
+      display: flex;
+      align-items: right;
+      justify-content: center;
+      flex-direction: column;
+      opacity: 0;
+      transform: translatey(75px);
+      transition: opacity 0.5s, transform 0.75s;
+    }
+  
+    .kontak.show {
+      opacity: 1;
+      transform: translatey(0px);
+    }
+  
+    .kontak.show div#instagram,.kontak.show div#github,.kontak.show div#shutterstock {
+      opacity: 0;
+      animation: slide-left 1s ease forwards 1.0s;
+    }
+    .kontak.show div#email,.kontak.show div#linkedin,.kontak.show div#dreamstime {
+      opacity: 0;
+      animation: slide-right 1s ease forwards 0.5s;
+    }
+    .kontak.show div#yt{
+      opacity:0;
+      animation: slide-down 1s ease forwards 1.5s;
+    }
+  
+    @keyframes slide-left {
+      0% {
+        opacity: 0;
+        transform: translateX(75px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes slide-right {
+      0% {
+        opacity: 0;
+        transform: translateX(-75px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slide-down {
+      0% {
+        opacity: 0;
+        transform: translatey(-45px);
+      }
+      100% {
+        opacity: 1;
+        transform: translatey(0);
+      }
+    }

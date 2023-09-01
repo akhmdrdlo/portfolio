@@ -28,6 +28,16 @@ function handleScroll() {
     } else {
       portfolio.classList.remove('show');
     }
+
+    var kontak = document.querySelector('.kontak');
+    var kontakPosition = window.pageYOffset;
+    var windowHeight = window.innerHeight;
+
+    if (kontakPosition > (kontak.offsetTop - windowHeight + 100)) {
+      kontak.classList.add('show');
+    } else {
+      kontak.classList.remove('show');
+    }
   }
 
   window.addEventListener('scroll', handleScroll);
