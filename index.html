@@ -38,7 +38,8 @@
         <div class="overlay">
             <img src="muka.jpg" alt="Avatar Logo" style="width:175px;" class="rounded-pill border">
           <h1>Yo Hello!!</h1>
-          <p class="mx-5">Perkenalkan nama saya Akhmad Ridlo Rifa'i yang berkeinginan untuk menjadi seorang Web Developer, Data Analyst, Fotografer serta Content Creator di masa mendatang!!</p>
+          <p class="mx-5">Perkenalkan nama saya Akhmad Ridlo Rifa'i yang berkeinginan untuk menjadi :</p>
+          <p class="ridlo"></p>
         </div>
     </div>
     <div class="container">
@@ -312,16 +313,39 @@
                 <!-- Portofolio Website 2 -->
                 <div class="col col-lg-6 website" id="w2">
                     <div class="card">
-                    <img src="img/portofolio/gudang1.png" class="card-image" alt="website 2" data-bs-target="#imageModal" data-bs-toggle="modal" onclick="showImage('img/portofolio/gudang1.png')">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">V-Warehouse</h5>
-                        <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 8</p>
+                        <img src="img/portofolio/gudang1.png" class="card-image" alt="website 2" data-bs-target="#imageModal" data-bs-toggle="modal" onclick="showImage('img/portofolio/gudang1.png')">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">V-Warehouse</h5>
+                            <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 8</p>
+                        </div>
                     </div>
+                </div>
+                
+                <!-- Portofolio Website 3 -->
+                <div class="col col-lg-6 website" id="w1">
+                    <div class="card">
+                        <img src="img/portofolio/madokabook.png" class="card-image" alt="website 3" data-bs-target="#imageModal" data-bs-toggle="modal" onclick="showImage('img/portofolio/madokabook.png')">
+                        <div class="card-body text-center">
+                            <a href="https://akhmdrdlo.github.io/dicoding-bookshelf-js" target="_blank" class="text-primary text-decoration-none"><h5 class="card-title">Madoka Bookshelf</h5></a>
+                            <p>Sistem Penataan Buku Bacaan dengan bahasa native Javascript (Tugas Dicoding)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portofolio Website 4 -->
+                <div class="col col-lg-6 website" id="w2">
+                    <div class="card">
+                        <img src="img/portofolio/pedulidiri.png" class="card-image" alt="website 4" data-bs-target="#imageModal" data-bs-toggle="modal" onclick="showImage('img/portofolio/pedulidiri.png')">
+                        <div class="card-body text-center">
+                            <a href=" https://peduli-diri-v2.000webhostapp.com/index.php" target="_blank" class="text-primarytext-decoration-none"><h5 class="card-title">Peduli Diri V2</h5></a>
+                            <p>Sistem Check-In Kesehatan dengan bahasa native PHP dan Argon Template (Tugas Besar SMK)</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         </div>
+       
         <!-- Modal Gallery-->
         <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg text-center">
@@ -408,5 +432,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.js"></script>
     <script src="https://kit.fontawesome.com/83e038d96f.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+    <script>
+    // Declare a variable to store the text to be typed
+    const text = "Web Developer, Data Analyst, Fotografer serta Content Creator Wanna Be!!";
+
+    // Declare a variable to store the current character index
+    let index = 0;
+
+    // Create a function to type the next character
+    function typeNextCharacter() {
+    // Check if there are any more characters to type
+    if (index >= text.length) {
+        // If there are no more characters, stop the animation
+        return;
+    }
+
+    // Get the next character
+    const character = text[index];
+
+    // Append the character to the element
+    document.querySelector(".ridlo").innerHTML += character;
+
+    // Increment the character index
+    index++;
+
+    // Call the function again after a delay
+    setTimeout(typeNextCharacter, 100);
+    }
+
+    // Call the function to start the animation
+    typeNextCharacter();
+    </script>
 </body>
 </html>
