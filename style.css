@@ -354,3 +354,8 @@ Bagian portofolio */
         transform: translatey(0);
       }
     }
+
+    .video-container {
+      position: relative;
+      width: auto;
+    }
