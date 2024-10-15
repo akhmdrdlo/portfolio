@@ -146,17 +146,14 @@ Bagian portofolio */
 }
 
 .filter-btn {
-  width: 100%;
+  width: fit-content;
   display: inline-block;
-  padding: 10px 20px;
   background-color:  #148dbd;
   color: #fff;
   border: none;
-
   cursor: pointer;
   transition: transform 0.75s;
 }
-
 .filter-btn:hover {
   background-color:  #07658a;
   transform: scale(110%);
