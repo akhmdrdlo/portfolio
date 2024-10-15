@@ -70,3 +70,31 @@ function showImage(src) {
   const largeImage = document.getElementById('largeImage');
   largeImage.src = src;
 }
+
+function hitungUmur() {
+  // Tanggal lahir (ganti dengan tanggal lahir Anda)
+  const tanggalLahir = new Date(2003, 11, 10); // Bulan dimulai dari 0 (Januari = 0, Desember = 11)
+
+  // Tanggal saat ini
+  const sekarang = new Date();
+
+  // Menghitung selisih tahun
+  let umur = sekarang.getFullYear() - tanggalLahir.getFullYear();
+
+  // Mengurangi 1 jika belum ulang tahun di tahun ini
+  const bulanSekarang = sekarang.getMonth();
+  const bulanLahir = tanggalLahir.getMonth();
+  const tanggalSekarang = sekarang.getDate();
+  const tanggalLahirSekarang = tanggalLahir.getDate();
+  if (bulanSekarang < bulanLahir || (bulanSekarang === bulanLahir && tanggalSekarang < tanggalLahirSekarang)) {
+    umur--;
+  }
+
+  // Menampilkan hasil dalam elemen HTML dengan id "umur"
+  document.getElementById("umur").textContent = umur + " tahun";
+}
+
+// Memanggil fungsi untuk menghitung dan menampilkan umur
+hitungUmur();
+
+
