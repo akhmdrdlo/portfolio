@@ -34,6 +34,11 @@
 </head>
 
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollBar"></div>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
@@ -100,15 +105,14 @@
                     </div>
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    <h4 class="text-primary font-weight-bolder text-center">Strategic Marketing IT Support & Cloud
+                    <h4 class="text-primary font-weight-bolder text-center">Backend Development Enthusiast & Cloud
                         Engineer</h4>
                     <p style="text-align:justify;">
-                        Seorang profesional yang menggabungkan analisis teknis dengan produksi media kreatif untuk
-                        mendorong penetrasi pasar produk elektronik strategis.
-                        Memiliki pengalaman sebagai <strong>Valedictorian Bangkit Academy 2024</strong> (Cloud
-                        Computing) dan berkontribusi signifikan dalam berbagai proyek IT dan Multimedia.
-                        Berpengalaman dalam Technical-to-Business Analysis, pembuatan konten eksekutif, dan manajemen
-                        proyek berbasis agile.
+                        Saya adalah seorang <strong>Google Cloud Certified Associate Cloud Engineer (ACE)</strong> dan
+                        lulusan berprestasi (Cumlaude, IPK 3.89) Teknik Informatika dari UIN Sunan Gunung Djati Bandung
+                        serta Distinction Graduate dari Bangkit Academy 2024. Bertransisi dari latar belakang media
+                        kreatif, kini saya berfokus pada arsitektur cloud, manajemen database, dan pengembangan sistem
+                        backend tangguh menggunakan Laravel, Next.js, dan infrastruktur cloud modern.
                     </p>
                     <div class="row">
                         <div class="col-lg-6">
@@ -122,8 +126,8 @@
                         <div class="col-lg-6">
                             <ul>
                                 <li><strong>Umur:</strong> <span id="umur"></span></li>
-                                <li style="margin-top: 5%;"><strong>Pendidikan Terakhir:</strong> <span>SMK
-                                        Fatahillah</span></li>
+                                <li style="margin-top: 5%;"><strong>Pendidikan Terakhir:</strong> <span>UIN Sunan Gunung
+                                        Djati (S1)</span></li>
                                 <li style="margin-top: 5%;"><strong>Alamat Email:</strong>
                                     <span>akhmadd432@gmail.com</span>
                                 </li>
@@ -141,15 +145,15 @@
                     <span class="gradient-text">Pengalaman Kerja</span>
                 </h2>
                 <div class="timeline">
-                    <!-- Item 1: PT Len Industri - Strategic Marketing -->
+                    <!-- Item 1: PT Len Industri - Business Development -->
                     <div class="timeline-item left">
                         <div class="content">
-                            <h4>Strategic Marketing IT Support</h4>
+                            <h4>Business Development Officer</h4>
                             <p class="text-primary mb-1">PT Len Industri (Persero) (Official)</p>
                             <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Nov 2025 -
                                 Present</span>
                             <p class="mt-2 text-white-50">
-                                Operational support kunci di divisi Strategic Marketing. Menggabungkan analisis teknis
+                                Operational support kunci di divisi Business Development. Menggabungkan analisis teknis
                                 (Spec Analysis) untuk narasi pemasaran, desain presentasi level eksekutif, dan pelaporan
                                 berbasis data untuk keputusan strategis.
                             </p>
@@ -461,10 +465,14 @@
                             <h6 class="text-uppercase text-secondary small fw-bold">Software & Cloud</h6>
                             <div class="d-flex flex-wrap gap-2">
                                 <span class="badge glass-badge">Cloud Computing</span>
-                                <span class="badge glass-badge">GCP</span>
-                                <span class="badge glass-badge">Web Development</span>
+                                <span class="badge glass-badge">GCP (ACE)</span>
+                                <span class="badge glass-badge">Laravel 11</span>
                                 <span class="badge glass-badge">Next.js</span>
-                                <span class="badge glass-badge">Strapi CMS</span>
+                                <span class="badge glass-badge">REST API</span>
+                                <span class="badge glass-badge">Redis</span>
+                                <span class="badge glass-badge">MySQL</span>
+                                <span class="badge glass-badge">Linux</span>
+                                <span class="badge glass-badge">Python</span>
                             </div>
                         </div>
                     </div>
@@ -488,9 +496,9 @@
                 </div>
             </div>
             <!-- Portofolio Items -->
-            <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+            <div class="row g-4 mb-5 justify-content-center">
                 <!-- Portofolio Item 1 -->
-                <div class="col fotografi" id="p1">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p1">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/agustus1.jpg" class="portfolio-image" alt="Image 1">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -502,7 +510,7 @@
                 </div>
 
                 <!-- Portofolio Item 2 -->
-                <div class="col fotografi" id="p2">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p2">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/agustus2.jpg" class="portfolio-image" alt="Image 2">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -513,7 +521,7 @@
                     </div>
                 </div>
                 <!-- Portofolio Item 3 -->
-                <div class="col fotografi" id="p3">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p3">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/best.jpg" class="portfolio-image" alt="Image 3">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -525,7 +533,7 @@
                 </div>
 
                 <!-- Portofolio Item 4 -->
-                <div class="col fotografi" id="p4">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p4">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/frame.jpg" class="portfolio-image" alt="Image 4">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -537,7 +545,7 @@
                 </div>
 
                 <!-- Portofolio Item 5 -->
-                <div class="col fotografi" id="p5">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p5">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/lowlight.jpg" class="portfolio-image" alt="Image 5">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -549,7 +557,7 @@
                 </div>
 
                 <!-- Portofolio Item 6 -->
-                <div class="col fotografi" id="p6">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p6">
                     <div class="portfolio-card">
                         <img src="img/thumbnail//lowlight2.jpg" class="portfolio-image" alt="Image 6">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -561,7 +569,7 @@
                 </div>
 
                 <!-- Portofolio Item 7 -->
-                <div class="col fotografi" id="p7">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p7">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/lowlight3.jpg" class="portfolio-image" alt="Image 7">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -572,7 +580,7 @@
                     </div>
                 </div>
                 <!-- Portofolio Item 8 -->
-                <div class="col fotografi" id="p8">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p8">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/panorama.jpg" class="portfolio-image" alt="Image 8">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -583,7 +591,7 @@
                     </div>
                 </div>
                 <!-- Portofolio Item 9 -->
-                <div class="col fotografi" id="p9">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p9">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/art.jpg" class="portfolio-image" alt="Image 9">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -594,7 +602,7 @@
                     </div>
                 </div>
                 <!-- Portofolio Item 10 -->
-                <div class="col fotografi" id="p10">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p10">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/fast.jpg" class="portfolio-image" alt="Image 10">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -605,7 +613,7 @@
                     </div>
                 </div>
                 <!-- Portofolio Item 11 -->
-                <div class="col fotografi" id="p11">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p11">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/tea.jpg" class="portfolio-image" alt="Image 11">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -616,7 +624,7 @@
                     </div>
                 </div>
                 <!-- Portofolio Item 12 -->
-                <div class="col fotografi" id="p12">
+                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p12">
                     <div class="portfolio-card">
                         <img src="img/thumbnail/scary.jpg" class="portfolio-image" alt="Image 12">
                         <div class="portfolio-description text-center" data-bs-toggle="modal"
@@ -626,187 +634,184 @@
                         </div>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-md-2 g-4 col-lg-10 justify-content-center mx-auto">
-                    <!-- Portofolio Website 1 -->
-                    <div class="col col-lg-6 website" id="w1">
-                        <div class="card">
-                            <img src="img/portofolio/perpus1.png" class="card-image" alt="website 1"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                onclick="showImage('img/portofolio/perpus1.png')">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">E-Librarie</h5>
-                                <p>Sistem Manajemen Perpustakaan Digital dengan basis Bootstrap 4 dan Native PHP dengan
-                                    fitur CRUD Buku dan Peminjaman dan User Privelege serta Image Inputter</p>
-                            </div>
+                <!-- Removed Nested Row for Websites -->
+                <!-- Portofolio Website 1 -->
+                <div class="col-12 col-lg-6 website" id="w1">
+                    <div class="card">
+                        <img src="img/portofolio/perpus1.png" class="card-image" alt="website 1" data-bs-toggle="modal"
+                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/perpus1.png')">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">E-Librarie</h5>
+                            <p>Sistem Manajemen Perpustakaan Digital dengan basis Bootstrap 4 dan Native PHP dengan
+                                fitur CRUD Buku dan Peminjaman dan User Privelege serta Image Inputter</p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Portofolio Website 2 -->
-                    <div class="col col-lg-6 website" id="w2">
-                        <div class="card">
-                            <img src="img/portofolio/gudang1.png" class="card-image" alt="website 2"
-                                data-bs-target="#imageModal" data-bs-toggle="modal"
-                                onclick="showImage('img/portofolio/gudang1.png')">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">V-Warehouse</h5>
-                                <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 8
-                                    Dengan fitur CRUD Gudang dan User Privileges
-                                </p>
+                <!-- Portofolio Website 2 -->
+                <div class="col-12 col-lg-6 website" id="w2">
+                    <div class="card">
+                        <img src="img/portofolio/gudang1.png" class="card-image" alt="website 2"
+                            data-bs-target="#imageModal" data-bs-toggle="modal"
+                            onclick="showImage('img/portofolio/gudang1.png')">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">V-Warehouse</h5>
+                            <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 8
+                                Dengan fitur CRUD Gudang dan User Privileges
+                            </p>
 
-                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Portofolio Website 3 -->
-                    <div class="col col-lg-6 website" id="w1">
-                        <div class="card">
-                            <img src="img/portofolio/madokabook.png" class="card-image" alt="website 3"
-                                data-bs-target="#imageModal" data-bs-toggle="modal"
-                                onclick="showImage('img/portofolio/madokabook.png')">
-                            <div class="card-body text-center">
-                                <a href="https://akhmdrdlo.github.io/dicoding-bookshelf-js" target="_blank"
-                                    class="text-primary text-decoration-none">
-                                    <h5 class="card-title">Madoka Bookshelf</h5>
-                                </a>
-                                <p>Sistem Penataan Buku Bacaan dengan bahasa native Javascript yang memungkinkan Input
-                                    dan Update Data secara Real-time</p>
-                                <a href="https://github.com/akhmdrdlo/dicoding-bookshelf-js" target="_blank">
-                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                                        alt="GitHub" width="30" height="30">
-                                </a>
-                            </div>
+                <!-- Portofolio Website 3 -->
+                <div class="col-12 col-lg-6 website" id="w1">
+                    <div class="card">
+                        <img src="img/portofolio/madokabook.png" class="card-image" alt="website 3"
+                            data-bs-target="#imageModal" data-bs-toggle="modal"
+                            onclick="showImage('img/portofolio/madokabook.png')">
+                        <div class="card-body text-center">
+                            <a href="https://akhmdrdlo.github.io/dicoding-bookshelf-js" target="_blank"
+                                class="text-primary text-decoration-none">
+                                <h5 class="card-title">Madoka Bookshelf</h5>
+                            </a>
+                            <p>Sistem Penataan Buku Bacaan dengan bahasa native Javascript yang memungkinkan Input
+                                dan Update Data secara Real-time</p>
+                            <a href="https://github.com/akhmdrdlo/dicoding-bookshelf-js" target="_blank">
+                                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                                    alt="GitHub" width="30" height="30">
+                            </a>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Portofolio Website 4 -->
-                    <div class="col col-lg-6 website" id="w2">
-                        <div class="card">
-                            <img src="img/portofolio/swif-dashboard.png" class="card-image" alt="website 4"
-                                data-bs-target="#imageModal" data-bs-toggle="modal"
-                                onclick="showImage('img/portofolio/pedulidiri.png')">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">SWIF (Smart Warehouse Information Flow)</h5>
-                                <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 11
-                                    Dilengkapi Track Record barang yang masuk dan keluar perbulan, Histori perubahan
-                                    data,Invoice Pengiriman yang bisa di print secara langsung</p>
-                                <p><a href="https://drive.google.com/file/d/1uKlmvzDCdhC8juuvFRkVtR0IN9L_UjUH/view?usp=drive_link"
-                                        target="_blank">Link Demo Website</a></p>
-                            </div>
+                <!-- Portofolio Website 4 -->
+                <div class="col-12 col-lg-6 website" id="w2">
+                    <div class="card">
+                        <img src="img/portofolio/swif-dashboard.png" class="card-image" alt="website 4"
+                            data-bs-target="#imageModal" data-bs-toggle="modal"
+                            onclick="showImage('img/portofolio/pedulidiri.png')">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">SWIF (Smart Warehouse Information Flow)</h5>
+                            <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 11
+                                Dilengkapi Track Record barang yang masuk dan keluar perbulan, Histori perubahan
+                                data,Invoice Pengiriman yang bisa di print secara langsung</p>
+                            <p><a href="https://drive.google.com/file/d/1uKlmvzDCdhC8juuvFRkVtR0IN9L_UjUH/view?usp=drive_link"
+                                    target="_blank">Link Demo Website</a></p>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Portofolio Website 5 -->
-                    <div class="col col-lg-6 website" id="w1">
-                        <div class="card">
-                            <img src="img/portofolio/slearas.png" class="card-image" alt="website 4"
-                                data-bs-target="#imageModal" data-bs-toggle="modal"
-                                onclick="showImage('img/portofolio/pedulidiri.png')">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">SELARAS (Sistem Laporan Sarana Saintek)</h5>
-                                <p>
-                                    Sebuah website pengaduan fasilitas yang diperuntukkan bagi masyarakat Saintek.
-                                    Berperan menjadi Back-End Developer yang menginisiai fungsi seperti Ticketing dan
-                                    Image Compressor.
-                                </p>
-                                <p><a href="https://drive.google.com/file/d/1vTm9NnZbjn__Y7Ilu5hwdO-GGDzNbLt_/view"
-                                        target="_blank">Link Demo Website</a></p>
-                            </div>
+                <!-- Portofolio Website 5 -->
+                <div class="col-12 col-lg-6 website" id="w1">
+                    <div class="card">
+                        <img src="img/portofolio/slearas.png" class="card-image" alt="website 4"
+                            data-bs-target="#imageModal" data-bs-toggle="modal"
+                            onclick="showImage('img/portofolio/pedulidiri.png')">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">SELARAS (Sistem Laporan Sarana Saintek)</h5>
+                            <p>
+                                Sebuah website pengaduan fasilitas yang diperuntukkan bagi masyarakat Saintek.
+                                Berperan menjadi Back-End Developer yang menginisiai fungsi seperti Ticketing dan
+                                Image Compressor.
+                            </p>
+                            <p><a href="https://drive.google.com/file/d/1vTm9NnZbjn__Y7Ilu5hwdO-GGDzNbLt_/view"
+                                    target="_blank">Link Demo Website</a></p>
                         </div>
                     </div>
-                    <!-- Portofolio Website 6 -->
-                    <div class="col col-lg-6 website" id="w2">
-                        <div class="card">
-                            <img src="img/portofolio/serayu-apps.png" class="card-image" alt="website 3"
-                                data-bs-target="#imageModal" data-bs-toggle="modal"
-                                onclick="showImage('img/portofolio/madokabook.png')">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Serayu Restoran Desktop Apps</h5>
-                                <p>Sistem Pemesanan Menu Restoran berbasis Aplikasi Desktop menggunakan Java JFrame GUI
-                                </p>
-                                <a href="https://github.com/akhmdrdlo/serayu_resto" target="_blank">
-                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                                        alt="GitHub" width="30" height="30">
-                                </a>
-                            </div>
+                </div>
+                <!-- Portofolio Website 6 -->
+                <div class="col-12 col-lg-6 website" id="w2">
+                    <div class="card">
+                        <img src="img/portofolio/serayu-apps.png" class="card-image" alt="website 3"
+                            data-bs-target="#imageModal" data-bs-toggle="modal"
+                            onclick="showImage('img/portofolio/madokabook.png')">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Serayu Restoran Desktop Apps</h5>
+                            <p>Sistem Pemesanan Menu Restoran berbasis Aplikasi Desktop menggunakan Java JFrame GUI
+                            </p>
+                            <a href="https://github.com/akhmdrdlo/serayu_resto" target="_blank">
+                                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                                    alt="GitHub" width="30" height="30">
+                            </a>
                         </div>
                     </div>
-                    <div class="row row-cols-1 row-cols-md-2 g-4 col-lg-10 justify-content-center mx-auto">
-                        <!-- Portofolio video 1 -->
-                        <div class="col col-lg-6 video" id="w1">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="portfolio-item">
-                                        <div class="video-container d-flex flex-column gap-3">
-                                            <iframe class="w-100" height="200" loading="lazy"
-                                                src="https://www.youtube.com/embed/t6gmjf0Fw3U?si=s9e1Hrm8wUlc1Yr7"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                                                style="border:0; border-radius: 8px;"></iframe>
-                                            <iframe class="w-100" height="200" loading="lazy"
-                                                src="https://www.youtube.com/embed/FN5jHHXKp8o?si=acwtI53BWduXvPTM"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                                                style="border:0; border-radius: 8px;"></iframe>
-                                        </div>
-                                        <h6 class="card-title mt-3">Event Video Editor</h6>
-                                        <p>Menjadi Main Video Editor dalam berbagai event Jurusan, serta diamanahi
-                                            menjadi
-                                            Video Editor dalam projek Video Profile Jurusan Teknik Informatika UIN SGD
-                                            Bandung</p>
-                                    </div>
+                </div>
+                <!-- Removed Nested Row for Videos -->
+                <!-- Portofolio video 1 -->
+                <div class="col-12 col-lg-6 video" id="w1">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="portfolio-item">
+                                <div class="video-container d-flex flex-column gap-3">
+                                    <iframe class="w-100" height="200" loading="lazy"
+                                        src="https://www.youtube.com/embed/t6gmjf0Fw3U?si=s9e1Hrm8wUlc1Yr7"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                        style="border:0; border-radius: 8px;"></iframe>
+                                    <iframe class="w-100" height="200" loading="lazy"
+                                        src="https://www.youtube.com/embed/FN5jHHXKp8o?si=acwtI53BWduXvPTM"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                        style="border:0; border-radius: 8px;"></iframe>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Portofolio video 2 -->
-                        <div class="col col-lg-6 video" id="w2">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="portfolio-item">
-                                        <div class="video-container d-flex flex-column gap-3">
-                                            <iframe class="w-100" height="200" loading="lazy"
-                                                src="https://drive.google.com/file/d/1TGPXske5EIIA3fvWSHf0mjqDHNB65R57/preview"
-                                                allowfullscreen style="border:0; border-radius: 8px;"></iframe>
-                                            <iframe class="w-100" height="200" loading="lazy"
-                                                src="https://drive.google.com/file/d/15c5X3eyD1oGL2ltWaaPc9nICMxAUJUnQ/preview"
-                                                allowfullscreen style="border:0; border-radius: 8px;"></iframe>
-                                        </div>
-                                        <h6 class="card-title mt-3">SAKTI Production Animated Bumper</h6>
-                                        <p>Hasil video selama menjadi Penanggungjawab Video Editor di SAKTI Production
-                                            Informatika <br>Digunakan sebagai Opening dalam tiap video Podcast yang
-                                            dirilis
-                                            di <a
-                                                href="https://www.youtube.com/@teknikinformatikauinbandung">Informatika
-                                                UIN Bandung Channel</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Portofolio video 3 -->
-                        <div class="col col-lg-6 video" id="w3">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <div class="portfolio-item">
-                                        <div class="video-container d-flex flex-column gap-3">
-                                            <iframe class="w-100" height="200" title="Video Portfolio" loading="lazy"
-                                                src="https://drive.google.com/file/d/1yM8rFMdzFRl3Shw1pyq2iBLEWnWmGebO/preview"
-                                                allowfullscreen style="border:0; border-radius: 8px;"></iframe>
-                                            <iframe class="w-100" height="200" title="Video Portfolio" loading="lazy"
-                                                src="https://drive.google.com/file/d/1Wq6NBSFMMivUPWmbe2bLdrgw6x0j7ewg/preview"
-                                                allowfullscreen style="border:0; border-radius: 8px;"></iframe>
-                                        </div>
-                                        <h6 class="card-title mt-3">IT Fair Animated Series</h6>
-                                        <p>Hasil video selama menjadi Kepala Divisi bagian PDD dalam suatu acara besar
-                                            di
-                                            Jurusan yaitu IT FAIR XIII</p>
-                                    </div>
-                                </div>
+                                <h6 class="card-title mt-3">Event Video Editor</h6>
+                                <p>Menjadi Main Video Editor dalam berbagai event Jurusan, serta diamanahi
+                                    menjadi
+                                    Video Editor dalam projek Video Profile Jurusan Teknik Informatika UIN SGD
+                                    Bandung</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Portofolio video 2 -->
+                <div class="col-12 col-lg-6 video" id="w2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="portfolio-item">
+                                <div class="video-container d-flex flex-column gap-3">
+                                    <iframe class="w-100" height="200" loading="lazy"
+                                        src="https://drive.google.com/file/d/1TGPXske5EIIA3fvWSHf0mjqDHNB65R57/preview"
+                                        allowfullscreen style="border:0; border-radius: 8px;"></iframe>
+                                    <iframe class="w-100" height="200" loading="lazy"
+                                        src="https://drive.google.com/file/d/15c5X3eyD1oGL2ltWaaPc9nICMxAUJUnQ/preview"
+                                        allowfullscreen style="border:0; border-radius: 8px;"></iframe>
+                                </div>
+                                <h6 class="card-title mt-3">SAKTI Production Animated Bumper</h6>
+                                <p>Hasil video selama menjadi Penanggungjawab Video Editor di SAKTI Production
+                                    Informatika <br>Digunakan sebagai Opening dalam tiap video Podcast yang
+                                    dirilis
+                                    di <a href="https://www.youtube.com/@teknikinformatikauinbandung">Informatika
+                                        UIN Bandung Channel</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portofolio video 3 -->
+                <div class="col-12 col-lg-6 video" id="w3">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="portfolio-item">
+                                <div class="video-container d-flex flex-column gap-3">
+                                    <iframe class="w-100" height="200" title="Video Portfolio" loading="lazy"
+                                        src="https://drive.google.com/file/d/1yM8rFMdzFRl3Shw1pyq2iBLEWnWmGebO/preview"
+                                        allowfullscreen style="border:0; border-radius: 8px;"></iframe>
+                                    <iframe class="w-100" height="200" title="Video Portfolio" loading="lazy"
+                                        src="https://drive.google.com/file/d/1Wq6NBSFMMivUPWmbe2bLdrgw6x0j7ewg/preview"
+                                        allowfullscreen style="border:0; border-radius: 8px;"></iframe>
+                                </div>
+                                <h6 class="card-title mt-3">IT Fair Animated Series</h6>
+                                <p>Hasil video selama menjadi Kepala Divisi bagian PDD dalam suatu acara besar
+                                    di
+                                    Jurusan yaitu IT FAIR XIII</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Removed Extra Closing Divs -->
             </div>
 
             <!-- Modal Gallery-->
@@ -822,75 +827,34 @@
         <footer class="kontak col-md-12 px-4" id="kontak">
             <h3 class="font-weight-bolder text-uppercase text-center pt-4">kontak saya</h3>
             <hr>
-            <div class="row">
-                <div class="col-md-6 mb-3" id="instagram">
-                    <div class="card align-items-center">
-                        <a href="https://www.instagram.com/akhmdrdlo/" style="color: #000; text-decoration: none;"
-                            target="_blank" class="d-flex align-items-center pt-1 pb-1">
-                            <i class="fab fa-instagram fa-fw fa-3x"></i>
-                            <h5 class="ms-2">Mutualan Instagram!!</h5>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3" id="email">
-                    <div class="card align-items-center">
-                        <a href="mailto:akhmadd432@gmail.com" style="color: #000; text-decoration: none;"
-                            target="_blank" class="d-flex align-items-center pt-1 pb-1">
-                            <i class="fa fa-envelope-o fa-fw fa-3x"></i>
-                            <h5 class="ms-2">Kirim Email Yuk!!</h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-3" id="github">
-                    <div class="card align-items-center">
-                        <a href="https://www.github.com/akhmdrdlo" style="color: #000; text-decoration: none;"
-                            target="_blank" class="d-flex align-items-center pt-1 pb-1">
-                            <i class="fa fa-github fa-fw fa-3x"></i>
-                            <h5 class="ms-2">Follback Github Yuk!!</h5>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3" id="linkedin">
-                    <div class="card align-items-center">
-                        <a href="https://www.linkedin.com/in/akhmdrdlo/" style="color: #000; text-decoration: none;"
-                            target="_blank" class="d-flex align-items-center pt-1 pb-1">
-                            <i class="fab fa-linkedin fa-fw fa-3x"></i>
-                            <h5 class="ms-2">Follow LinkedIn!!</h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-3" id="shutterstock">
-                    <div class="card align-items-center">
-                        <a href="https://www.shutterstock.com/g/Akhmad+Ridlo"
-                            style="color: #000; text-decoration: none;" target="_blank"
-                            class="d-flex align-items-center pt-1 pb-1">
-                            <img src="img/portofolio/shutterstocklogo.png" style="max-width: 300px;" alt="" srcset="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3" id="dreamstime">
-                    <div class="card align-items-center">
-                        <a href="https://www.dreamstime.com/akhmdrdlo25_info"
-                            style="color: #000; text-decoration: none;" target="_blank"
-                            class="d-flex align-items-center pt-1 pb-1">
-                            <img src="img/portofolio/dreamstimelogo.png" style="max-width: 230px;" alt="" srcset="">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 mb-3 align-items-center" id="yt">
-                    <div class="card align-items-center">
-                        <a href="https://www.youtube.com/@sirkelmaju_ch" style="color: #000; text-decoration: none;"
-                            target="_blank" class="d-flex align-items-center pt-1 pb-1">
-                            <img src="img/portofolio/youtubelogo.png" style="max-width: 230px;" alt="" srcset="">
-                        </a>
-                    </div>
-                </div>
+            <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 my-5 social-links">
+                <a href="https://www.instagram.com/akhmdrdlo/" target="_blank" class="social-icon glass-icon"
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:akhmadd432@gmail.com" target="_blank" class="social-icon glass-icon" aria-label="Email">
+                    <i class="fa fa-envelope-o"></i>
+                </a>
+                <a href="https://www.github.com/akhmdrdlo" target="_blank" class="social-icon glass-icon"
+                    aria-label="GitHub">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/akhmdrdlo/" target="_blank" class="social-icon glass-icon"
+                    aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@sirkelmaju_ch" target="_blank" class="social-icon glass-icon"
+                    aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.shutterstock.com/g/Akhmad+Ridlo" target="_blank" class="social-icon glass-icon"
+                    aria-label="Shutterstock" title="Shutterstock">
+                    <i class="fas fa-camera"></i>
+                </a>
+                <a href="https://www.dreamstime.com/akhmdrdlo25_info" target="_blank" class="social-icon glass-icon"
+                    aria-label="Dreamstime" title="Dreamstime">
+                    <i class="fas fa-images"></i>
+                </a>
             </div>
             <div class="row">
                 <div class="col-md-12 mt-2 text-center">

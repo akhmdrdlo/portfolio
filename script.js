@@ -30,7 +30,7 @@ window.addEventListener('scroll', () => {
 
 // Portfolio Filter
 const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio .col');
+const portfolioItems = document.querySelectorAll('.fotografi, .website, .video');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -88,7 +88,7 @@ function hitungUmur() {
 hitungUmur();
 
 // Typing animation for hero section
-const text = "Strategic Marketing IT Support, Associate Cloud Engineer, Video Editor & Content Creator!";
+const text = "Backend Development Enthusiast, Business Development IT Support, Certified Google Associate Cloud Engineer, & Creative Multimedia!";
 let index = 0;
 let isDeleting = false;
 let typingSpeed = 100;
@@ -175,13 +175,14 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Parallax effect for hero section
+// Scroll Progress Bar
 window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroGradient = document.querySelector('.hero-gradient');
-
-    if (heroGradient) {
-        heroGradient.style.transform = `translateY(${scrolled * 0.5}px)`;
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolledPercent = (winScroll / height) * 100;
+    const scrollBar = document.getElementById("scrollBar");
+    if (scrollBar) {
+        scrollBar.style.width = scrolledPercent + "%";
     }
 });
 
