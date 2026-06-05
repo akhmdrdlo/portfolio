@@ -1,4 +1,10 @@
-// Initialize AOS (Animate On Scroll)
+// Initialize and apply saved theme immediately to prevent layout flashing
+(function () {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+})();
+
+// Initialize AOS (Animate On Scroll) and Theme/Contact handlers
 document.addEventListener('DOMContentLoaded', function () {
     AOS.init({
         duration: 1000,
@@ -6,26 +12,105 @@ document.addEventListener('DOMContentLoaded', function () {
         offset: 100,
         easing: 'ease-in-out'
     });
-});
 
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
-
-// Navbar scroll effect
-let lastScroll = 0;
-const navbar = document.querySelector('.glass-nav');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
-        navbar.style.background = 'rgba(15, 12, 41, 0.95)';
-        navbar.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-    } else {
-        navbar.style.background = 'rgba(15, 12, 41, 0.7)';
-        navbar.style.boxShadow = 'none';
+    function updateThemeIcon(theme) {
+        if (!themeIcon) return;
+        if (theme === 'light') {
+            themeIcon.className = 'fas fa-sun';
+        } else {
+            themeIcon.className = 'fas fa-moon';
+        }
     }
 
-    lastScroll = currentScroll;
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    updateThemeIcon(currentTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const activeTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+            const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
+
+    // Navbar scroll effect
+    const navbar = document.querySelector('.glass-nav');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // Scroll Fade-out Hero Indicator
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (scrollIndicator) {
+        scrollIndicator.style.transition = 'opacity 0.3s ease';
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                scrollIndicator.style.opacity = '0';
+            } else {
+                scrollIndicator.style.opacity = '1';
+            }
+        });
+    }
+
+    // Skill Progress Bars Viewport Intersection Observer
+    if ('IntersectionObserver' in window) {
+        const progressObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fill = entry.target;
+                    const targetWidth = fill.getAttribute('data-progress') || '0%';
+                    fill.style.width = targetWidth;
+                    observer.unobserve(fill);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.skill-progress-fill').forEach(fill => {
+            progressObserver.observe(fill);
+        });
+    } else {
+        document.querySelectorAll('.skill-progress-fill').forEach(fill => {
+            fill.style.width = fill.getAttribute('data-progress') || '0%';
+        });
+    }
+
+    // Contact Form Mock Submission Handler
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalContent = submitBtn.innerHTML;
+
+            // Show sending state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Mengirim...';
+
+            setTimeout(() => {
+                // Restore button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalContent;
+
+                // Show success feedback
+                showToast('Pesan Anda berhasil dikirim! Terima kasih telah menghubungi saya. Saya akan merespons secepatnya.', 'success');
+                contactForm.reset();
+            }, 1200);
+        });
+    }
 });
 
 // Portfolio Filter
@@ -47,7 +132,7 @@ filterButtons.forEach(button => {
             setTimeout(() => {
                 if (filterValue === 'all' || item.classList.contains(filterValue)) {
                     item.style.display = 'block';
-                    item.style.animation = `fadeInUp 0.6s ease forwards ${index * 0.1}s`;
+                    item.style.animation = `fadeInUp 0.6s ease forwards ${index * 0.05}s`;
                 } else {
                     item.style.display = 'none';
                 }
@@ -56,12 +141,107 @@ filterButtons.forEach(button => {
     });
 });
 
-// Modal image display
-function showImage(src) {
-    const largeImage = document.getElementById('largeImage');
-    if (largeImage) {
-        largeImage.src = src;
+// Modal project details and image display
+function showProjectDetails(src, title, desc, techArray, demoLink, githubLink) {
+    const projectModalImg = document.getElementById('projectModalImg');
+    if (projectModalImg) {
+        projectModalImg.src = src;
     }
+    const projectModalTitle = document.getElementById('projectModalTitle');
+    if (projectModalTitle) {
+        projectModalTitle.textContent = title || 'Proyek Portofolio';
+    }
+    const projectModalDesc = document.getElementById('projectModalDesc');
+    if (projectModalDesc) {
+        projectModalDesc.textContent = desc || '';
+    }
+
+    const techList = document.getElementById('projectModalTechList');
+    if (techList) {
+        techList.innerHTML = '';
+        if (techArray && techArray.length > 0) {
+            techArray.forEach(tech => {
+                const badge = document.createElement('span');
+                badge.className = 'badge glass-badge';
+                badge.textContent = tech;
+                techList.appendChild(badge);
+            });
+            const techSection = document.getElementById('projectModalTechSection');
+            if (techSection) techSection.style.display = 'block';
+        } else {
+            const techSection = document.getElementById('projectModalTechSection');
+            if (techSection) techSection.style.display = 'none';
+        }
+    }
+
+    const demoBtn = document.getElementById('projectModalDemoLink');
+    const codeBtn = document.getElementById('projectModalCodeLink');
+    const actionsContainer = document.getElementById('projectModalActions');
+
+    if (demoBtn) {
+        if (demoLink) {
+            demoBtn.href = demoLink;
+            demoBtn.style.display = 'inline-flex';
+        } else {
+            demoBtn.style.display = 'none';
+        }
+    }
+
+    if (codeBtn) {
+        if (githubLink) {
+            codeBtn.href = githubLink;
+            codeBtn.style.display = 'inline-flex';
+        } else {
+            codeBtn.style.display = 'none';
+        }
+    }
+
+    if (actionsContainer) {
+        if (!demoLink && !githubLink) {
+            actionsContainer.style.display = 'none';
+        } else {
+            actionsContainer.style.display = 'flex';
+        }
+    }
+}
+
+function showImage(src, title, description) {
+    showProjectDetails(src, title, description, [], '', '');
+}
+
+// Toast Notification Helper
+function showToast(message, type = 'success') {
+    const container = document.getElementById('toastContainer');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = `custom-toast custom-toast-${type}`;
+
+    const iconClass = type === 'success' ? 'fas fa-check' : 'fas fa-exclamation-triangle';
+
+    toast.innerHTML = `
+        <div class="custom-toast-icon">
+            <i class="${iconClass}"></i>
+        </div>
+        <div class="custom-toast-message">${message}</div>
+    `;
+
+    container.appendChild(toast);
+
+    // Trigger animation
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+
+    // Remove toast after duration
+    setTimeout(() => {
+        toast.classList.remove('show');
+        const handleTransitionEnd = () => {
+            toast.remove();
+            toast.removeEventListener('transitionend', handleTransitionEnd);
+        };
+        toast.addEventListener('transitionend', handleTransitionEnd);
+    }, 4000);
 }
 
 // Calculate and display age
@@ -175,14 +355,22 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Scroll Progress Bar
+// Scroll Progress and Circular Back to Top progress updates
 window.addEventListener('scroll', () => {
     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolledPercent = (winScroll / height) * 100;
+    const scrolledPercent = winScroll / height;
+
     const scrollBar = document.getElementById("scrollBar");
     if (scrollBar) {
-        scrollBar.style.width = scrolledPercent + "%";
+        scrollBar.style.width = (scrolledPercent * 100) + "%";
+    }
+
+    const circle = document.querySelector('.progress-svg circle');
+    if (circle) {
+        // stroke-dasharray is 151
+        const offset = 151 - (scrolledPercent * 151);
+        circle.style.strokeDashoffset = Math.max(0, Math.min(151, offset));
     }
 });
 
@@ -224,35 +412,98 @@ function animateCounter(element, target, duration = 2000) {
     }, 16);
 }
 
-// Add hover effect for cards
-document.querySelectorAll('.card, .skill-card, .cert-card').forEach(card => {
-    card.addEventListener('mouseenter', function (e) {
+// Mouse coordinate tracking for spotlight effects in all sections
+document.querySelectorAll('.card, .portfolio-card, .cert-card, .skill-category-card, .timeline-item .content, .glass-panel').forEach(el => {
+    el.addEventListener('mousemove', function (e) {
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-
         this.style.setProperty('--mouse-x', `${x}px`);
         this.style.setProperty('--mouse-y', `${y}px`);
     });
 });
 
-console.log('Portfolio loaded successfully! 🚀');
+// Add 3D Tilt Hover effect for cards
+document.querySelectorAll('.card, .portfolio-card, .cert-card').forEach(card => {
+    card.addEventListener('mousemove', function (e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-// Back to Top Button Logic
-const backToTopBtn = document.getElementById('backToTop');
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTopBtn.classList.add('active');
-    } else {
-        backToTopBtn.classList.remove('active');
-    }
-});
+        // Tilt values (max 10 degrees)
+        const rotateX = ((centerY - y) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * 10;
 
-backToTopBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    card.addEventListener('mouseleave', function () {
+        this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        this.style.transition = 'transform 0.5s ease';
+    });
+
+    card.addEventListener('mouseenter', function () {
+        this.style.transition = 'none';
     });
 });
+
+console.log('Portfolio loaded successfully! 🚀');
+
+// Back to Top Button Logic (Circular Progress Wrapper)
+const backToTopBtn = document.getElementById('backToTop');
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Active Navbar Link highlight on Scroll
+const sectionsList = document.querySelectorAll('section, footer');
+const navLinksList = document.querySelectorAll('.glass-nav .nav-link');
+
+if (sectionsList.length > 0 && navLinksList.length > 0) {
+    window.addEventListener('scroll', () => {
+        let currentSectionId = '';
+        const navbarHeight = document.querySelector('.glass-nav').offsetHeight;
+
+        sectionsList.forEach(section => {
+            const sectionTop = section.offsetTop - navbarHeight - 120;
+            const sectionHeight = section.offsetHeight;
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSectionId = section.getAttribute('id');
+            }
+        });
+
+        navLinksList.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSectionId}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+}
+
+// Click to Copy Email function with custom toast notification
+function copyEmailToClipboard(element) {
+    const emailText = "akhmadd432@gmail.com";
+    navigator.clipboard.writeText(emailText).then(() => {
+        showToast('Alamat email berhasil disalin ke clipboard!', 'success');
+    }).catch(err => {
+        showToast('Gagal menyalin email. Silakan salin secara manual.', 'warning');
+    });
+}

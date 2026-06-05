@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -64,12 +64,21 @@
                     <li class="nav-item">
                         <a href="#kontak" class="nav-link">Kontak</a>
                     </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <section class="hero-section">
-        <div class="hero-gradient"></div>
+        <div class="hero-gradient">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
         <div class="hero-content">
             <div class="profile-img-wrapper" data-aos="zoom-in" data-aos-duration="1000">
                 <img src="muka.jpg" alt="Akhmad Ridlo" class="profile-img">
@@ -95,787 +104,969 @@
             <div class="mouse"></div>
         </div>
     </section>
-    <div class="container mt-3">
-        <div class="about-me col-md-12 px-4" id="about" data-aos="fade-up">
-            <h3 class="text-primary font-weight-bolder">TENTANG SAYA</h3>
-            <div class="row">
-                <div class="col-lg-4 d-flex justify-content-center align-items-center">
-                    <div class="about-img-container">
-                        <img src="muka1.png" class="img-fluid about-img" alt="Akhmad Ridlo">
-                    </div>
-                </div>
-                <div class="col-lg-8 pt-4 pt-lg-0 content">
-                    <h4 class="text-primary font-weight-bolder text-center">Backend Development Enthusiast & Cloud
-                        Engineer</h4>
-                    <p style="text-align:justify;">
-                        Saya adalah seorang <strong>Google Cloud Certified Associate Cloud Engineer (ACE)</strong> dan
-                        lulusan berprestasi (Cumlaude, IPK 3.89) Teknik Informatika dari UIN Sunan Gunung Djati Bandung
-                        serta Distinction Graduate dari Bangkit Academy 2024. Bertransisi dari latar belakang media
-                        kreatif, kini saya berfokus pada arsitektur cloud, manajemen database, dan pengembangan sistem
-                        backend tangguh menggunakan Laravel, Next.js, dan infrastruktur cloud modern.
-                    </p>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><strong>Nama Lengkap :</strong> <span>Akhmad Ridlo Rifa'i</span></li>
-                                <li><strong>Tempat/Tanggal Lahir :</strong> <span>Kebumen, 10 Desember 2003</span></li>
-                                <li><strong>Asal Kota:</strong> <span>Cileungsi, Kabupaten Bogor</span></li>
-                                <li><strong>Status:</strong> <span>Strategic Marketing IT Support</span></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul>
-                                <li><strong>Umur:</strong> <span id="umur"></span></li>
-                                <li style="margin-top: 5%;"><strong>Pendidikan Terakhir:</strong> <span>UIN Sunan Gunung
-                                        Djati (S1)</span></li>
-                                <li style="margin-top: 5%;"><strong>Alamat Email:</strong>
-                                    <span>akhmadd432@gmail.com</span>
-                                </li>
-                            </ul>
+    <section class="about-section py-5" id="about" data-aos="fade-up">
+        <div class="container">
+            <div class="glass-panel about-me col-md-12 px-4">
+                <h3 class="gradient-text font-weight-bolder">TENTANG SAYA</h3>
+                <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                        <div class="about-img-container">
+                            <img src="muka1.png" class="img-fluid about-img" alt="Akhmad Ridlo">
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Experience Section -->
-        <section class="experience-section py-5" id="experience" data-aos="fade-up">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">
-                    <span class="gradient-text">Pengalaman Kerja</span>
-                </h2>
-                <div class="timeline">
-                    <!-- Item 1: PT Len Industri - Business Development -->
-                    <div class="timeline-item left">
-                        <div class="content">
-                            <h4>Business Development Officer</h4>
-                            <p class="text-primary mb-1">PT Len Industri (Persero) (Official)</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Nov 2025 -
-                                Present</span>
-                            <p class="mt-2 text-white-50">
-                                Operational support kunci di divisi Business Development. Menggabungkan analisis teknis
-                                (Spec Analysis) untuk narasi pemasaran, desain presentasi level eksekutif, dan pelaporan
-                                berbasis data untuk keputusan strategis.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Item 2: Codingo Singapore -->
-                    <div class="timeline-item right">
-                        <div class="content">
-                            <h4>Programmer (Freelance)</h4>
-                            <p class="text-primary mb-1">Codingo Singapore</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Nov 2025 -
-                                Present</span>
-                            <p class="mt-2 text-white-50">Bekerja secara remote sebagai Programmer untuk klien
-                                internasional.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 3: PT Len Industri - Intern -->
-                    <div class="timeline-item left">
-                        <div class="content">
-                            <h4>Strategic Transformation Officer (Intern)</h4>
-                            <p class="text-primary mb-1">PT Len Industri (Persero) (Official)</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Sep 2025 - Nov
-                                2025</span>
-                            <p class="mt-2 text-white-50">Mengembangkan Dashboard Monitoring Program berbasis Website
-                                menggunakan Next.js dan Strapi Headless CMS. Mengonfigurasi automasi data dan filtering
-                                database.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 4: Dicoding Community -->
-                    <div class="timeline-item right">
-                        <div class="content">
-                            <h4>Community Builder</h4>
-                            <p class="text-primary mb-1">Dicoding Community Network UIN SGD Bandung</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Sep 2025 -
-                                Present</span>
-                            <p class="mt-2 text-white-50">Membangun komunitas developer dan memfasilitasi kegiatan
-                                belajar.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 5: HIMATIF -->
-                    <div class="timeline-item left">
-                        <div class="content">
-                            <h4>Lead of KOMINFO Division</h4>
-                            <p class="text-primary mb-1">HIMATIF UIN SGD Bandung</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Mar 2025 - Jan
-                                2026</span>
-                            <p class="mt-2 text-white-50">Memimpin divisi komunikasi dan informasi, strategi media
-                                sosial, dan desain grafis organisasi.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 6: SABIT Academy -->
-                    <div class="timeline-item right">
-                        <div class="content">
-                            <h4>Programming Teacher</h4>
-                            <p class="text-primary mb-1">SABIT Academy</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Feb 2025 - Jun
-                                2025</span>
-                            <p class="mt-2 text-white-50">Mengajar kelas pemrograman dasar dan berpikir algoritma untuk
-                                15 siswa. Membimbing latihan coding dan proyek.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 7: SAKTI Podcast -->
-                    <div class="timeline-item left">
-                        <div class="content">
-                            <h4>PIC Video Production</h4>
-                            <p class="text-primary mb-1">SAKTI Podcast Official</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Jul 2024 - Jun
-                                2025</span>
-                            <p class="mt-2 text-white-50">Koordinator Divisi Produksi Video. Mengelola tim, jadwal
-                                produksi, dan quality control konten sebelum upload.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 8: Bangkit Academy -->
-                    <div class="timeline-item right">
-                        <div class="content">
-                            <h4>Cloud Computing Cohort (Valedictorian)</h4>
-                            <p class="text-primary mb-1">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka
-                            </p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Sep 2024 - Jan
-                                2025</span>
-                            <p class="mt-2 text-white-50">Distinction Graduate & Valedictorian Speaker (Top Cohort).
-                                Juara 1 Soft Skills Challenge. Mempelajari GCP, Machine Learning API, dan memimpin tim
-                                Capstone "JejakBatik".</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 9: LPM Suaka -->
-                    <div class="timeline-item left">
-                        <div class="content">
-                            <h4>IT Developer & Reporter</h4>
-                            <p class="text-primary mb-1">Lembaga Pers Mahasiswa Suaka</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Aug 2023 - Jan
-                                2025</span>
-                            <p class="mt-2 text-white-50">Mengelola website berita (Maintenance & Updates) serta meliput
-                                berita lapangan sebagai jurnalis foto.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 10: Freelance -->
-                    <div class="timeline-item right">
-                        <div class="content">
-                            <h4>Freelance Videographer</h4>
-                            <p class="text-primary mb-1">Professional Freelance</p>
-                            <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Sep 2021 -
-                                Present</span>
-                            <p class="mt-2 text-white-50">4 tahun pengalaman. Video Editor & DoP untuk berbagai proyek:
-                                Profil Video Jurusan, Wedding, Event Dokumentasi, dan Iklan Komersial.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section class="certifications-section py-5" id="certifications">
-            <div class="container">
-                <h2 class="section-title text-center mb-5" data-aos="fade-up">
-                    <span class="gradient-text">Sertifikasi & Pencapaian</span>
-                </h2>
-                <div class="row g-4 text-center justify-content-center">
-                    <!-- Google ACE -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="cert-card h-100">
-                            <div class="cert-icon">
-                                <i class="fab fa-google"></i>
+                    <div class="col-lg-8 pt-4 pt-lg-0 content">
+                        <h4 class="text-primary font-weight-bolder text-center">Backend Development Enthusiast & Cloud
+                            Engineer</h4>
+                        <p style="text-align:justify;">
+                            Saya adalah seorang <strong>Google Cloud Certified Associate Cloud Engineer (ACE)</strong>
+                            dan
+                            lulusan berprestasi (Cumlaude, IPK 3.89) Teknik Informatika dari UIN Sunan Gunung Djati
+                            Bandung
+                            serta Distinction Graduate dari Bangkit Academy 2024. Bertransisi dari latar belakang media
+                            kreatif, kini saya berfokus pada arsitektur cloud, manajemen database, dan pengembangan
+                            sistem
+                            backend tangguh menggunakan Laravel, Next.js, dan infrastruktur cloud modern.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><strong>Nama Lengkap :</strong> <span>Akhmad Ridlo Rifa'i S.T.</span></li>
+                                    <li><strong>Tempat/Tanggal Lahir :</strong> <span>Kebumen, 10 Desember 2003</span>
+                                    </li>
+                                    <li><strong>Asal Kota:</strong> <span>Cileungsi, Kabupaten Bogor</span></li>
+                                    <li><strong>Status:</strong> <span>Business Development Officer</span></li>
+                                </ul>
                             </div>
-                            <h5>Associate Cloud Engineer</h5>
-                            <p class="text-muted">Google</p>
-                            <span class="badge bg-success bg-opacity-75">Certified (Apr 2025)</span>
-                        </div>
-                    </div>
-
-                    <!-- Menjadi Google Cloud Engineer -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                        <div class="cert-card h-100">
-                            <div class="cert-icon">
-                                <i class="fas fa-cloud"></i>
-                            </div>
-                            <h5>Menjadi Google Cloud Engineer</h5>
-                            <p class="text-muted">Dicoding Indonesia</p>
-                            <span class="badge bg-primary bg-opacity-75">Certified (Nov 2024)</span>
-                        </div>
-                    </div>
-
-                    <!-- Applied Machine Learning -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                        <div class="cert-card h-100">
-                            <div class="cert-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h5>Applied ML in Google Cloud</h5>
-                            <p class="text-muted">Dicoding Indonesia</p>
-                            <span class="badge bg-primary bg-opacity-75">Completed (Des 2024)</span>
-                        </div>
-                    </div>
-
-                    <!-- TOEFA -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                        <div class="cert-card h-100">
-                            <div class="cert-icon">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <h5>TOEFA English (Score 570)</h5>
-                            <p class="text-muted">UIN Sunan Gunung Djati</p>
-                            <span class="badge bg-warning bg-opacity-75">Proficient (Nov 2024)</span>
-                        </div>
-                    </div>
-
-                    <!-- UX Design -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
-                        <div class="cert-card h-100">
-                            <div class="cert-icon">
-                                <i class="fas fa-pen-nib"></i>
-                            </div>
-                            <h5>Fundamental UX Design</h5>
-                            <p class="text-muted">Dicoding Indonesia</p>
-                            <span class="badge bg-primary bg-opacity-75">Completed (Apr 2025)</span>
-                        </div>
-                    </div>
-
-                    <!-- Linux Essentials -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
-                        <div class="cert-card h-100">
-                            <div class="cert-icon">
-                                <i class="fab fa-linux"></i>
-                            </div>
-                            <h5>NDG Linux Essentials</h5>
-                            <p class="text-muted">Cisco Networking Academy</p>
-                            <span class="badge bg-success bg-opacity-75">Certified (Jul 2024)</span>
-                        </div>
-                    </div>
-
-                    <!-- Google Play -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
-                        <div class="cert-card h-100">
-                            <div class="cert-icon">
-                                <i class="fab fa-google-play"></i>
-                            </div>
-                            <h5>Google Play Store Listing</h5>
-                            <p class="text-muted">Google Play Academy</p>
-                            <span class="badge bg-success bg-opacity-75">Certified (Mar 2024)</span>
-                        </div>
-                    </div>
-
-                    <!-- Basic AI -->
-                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
-                        <div class="cert-card h-100">
-                            <div class="cert-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h5>Belajar Dasar AI</h5>
-                            <p class="text-muted">Dicoding Indonesia</p>
-                            <span class="badge bg-primary bg-opacity-75">Completed (Nov 2024)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- NEW SKILLS SECTION WITH UPDATED KEYWORDS -->
-        <div class="skill col-md-12 px-4" id="skill" data-aos="fade-up">
-            <h3 class="text-primary text-center mb-5">SKILLS & EXPERTISE</h3>
-            <div class="row g-4 justify-content-center">
-                <!-- Strategic & Operations -->
-                <div class="col-lg-6">
-                    <div class="skill-category-card h-100">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fas fa-chart-line fa-2x text-primary me-3"></i>
-                            <h4 class="mb-0">Strategic & Operations</h4>
-                        </div>
-                        <p class="text-muted mb-4 opacity-75">Business Analysis, Management & Strategic Planning</p>
-
-                        <div class="skill-group mb-3">
-                            <h6 class="text-uppercase text-secondary small fw-bold">Business & Strategy</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge glass-badge">Data Analysis</span>
-                                <span class="badge glass-badge">Business Analysis</span>
-                                <span class="badge glass-badge">Market Analysis</span>
-                                <span class="badge glass-badge">IT Strategy</span>
-                                <span class="badge glass-badge">Marketing</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group mb-3">
-                            <h6 class="text-uppercase text-secondary small fw-bold">Management & Soft Skills</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge glass-badge">Project Management</span>
-                                <span class="badge glass-badge">Team Leadership</span>
-                                <span class="badge glass-badge">Agile Methodology</span>
-                                <span class="badge glass-badge">Public Speaking</span>
-                                <span class="badge glass-badge">Teaching</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group">
-                            <h6 class="text-uppercase text-secondary small fw-bold">Administration</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge glass-badge">Data Visualization</span>
-                                <span class="badge glass-badge">HR Development</span>
-                                <span class="badge glass-badge">Report Writing</span>
-                                <span class="badge glass-badge">Office Suite</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Creative & Technology -->
-                <div class="col-lg-6">
-                    <div class="skill-category-card h-100">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fas fa-laptop-code fa-2x text-warning me-3"></i>
-                            <h4 class="mb-0">Creative & Technology</h4>
-                        </div>
-                        <p class="text-muted mb-4 opacity-75">Multimedia Production & Cloud Computing</p>
-
-                        <div class="skill-group mb-3">
-                            <h6 class="text-uppercase text-secondary small fw-bold">Video Production</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge glass-badge">Video Editing</span>
-                                <span class="badge glass-badge">Videography</span>
-                                <span class="badge glass-badge">Post-Production</span>
-                                <span class="badge glass-badge">Premiere Pro</span>
-                                <span class="badge glass-badge">After Effects</span>
-                                <span class="badge glass-badge">DaVinci Resolve</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group mb-3">
-                            <h6 class="text-uppercase text-secondary small fw-bold">Design & Graphics</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge glass-badge">Graphic Design</span>
-                                <span class="badge glass-badge">Logo Design</span>
-                                <span class="badge glass-badge">UI/UX Design</span>
-                                <span class="badge glass-badge">Figma</span>
-                                <span class="badge glass-badge">Canva</span>
-                            </div>
-                        </div>
-
-                        <div class="skill-group">
-                            <h6 class="text-uppercase text-secondary small fw-bold">Software & Cloud</h6>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge glass-badge">Cloud Computing</span>
-                                <span class="badge glass-badge">GCP (ACE)</span>
-                                <span class="badge glass-badge">Laravel 11</span>
-                                <span class="badge glass-badge">Next.js</span>
-                                <span class="badge glass-badge">REST API</span>
-                                <span class="badge glass-badge">Redis</span>
-                                <span class="badge glass-badge">MySQL</span>
-                                <span class="badge glass-badge">Linux</span>
-                                <span class="badge glass-badge">Python</span>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><strong>Umur:</strong> <span id="umur"></span></li>
+                                    <li style="margin-top: 5%;"><strong>Pendidikan Terakhir:</strong> <span> Teknik
+                                            Informatika UIN Sunan
+                                            Gunung
+                                            Djati</span></li>
+                                    <li style="margin-top: 5%;"><strong>Alamat Email:</strong>
+                                        <span class="copyable-email" onclick="copyEmailToClipboard(this)"
+                                            title="Klik untuk menyalin email"
+                                            style="cursor: pointer; transition: color 0.3s ease;">
+                                            akhmadd432@gmail.com <i class="far fa-copy ms-1 text-primary small"></i>
+                                        </span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <hr>
-        <div class="portfolio col-12" id="portfolio" data-aos="fade-up">
-            <h3 class="text-primary text-center">PORTOFOLIO</h3>
-            <!-- Filter Bar -->
-            <div class="btn-group mb-3">
-                <div class="btn align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
-                    <button type="button" class="btn btn-primary filter-btn" data-filter="fotografi">Fotografi</button>
-                </div>
-                <div class="btn align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
-                    <button type="button" class="btn btn-primary filter-btn" data-filter="website">Software</button>
-                </div>
-                <div class="btn align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
-                    <button type="button" class="btn btn-primary filter-btn" data-filter="video">Videografi</button>
-                </div>
-            </div>
-            <!-- Portofolio Items -->
-            <div class="row g-4 mb-5 justify-content-center">
-                <!-- Portofolio Item 1 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p1">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/agustus1.jpg" class="portfolio-image" alt="Image 1">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/agustus1.JPG')">
-                            <h5>Chasing the Flag</h5>
-                            <p>Lomba Bendera - Agustusan 2022</p>
-                        </div>
+    <!-- Experience Section -->
+    <section class="experience-section py-5" id="experience" data-aos="fade-up">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">
+                <span class="gradient-text">Pengalaman Kerja</span>
+            </h2>
+            <div class="timeline">
+                <!-- Item 1: PT Len Industri - Business Development -->
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>Business Development Officer</h4>
+                        <p class="text-primary mb-1">PT Len Industri (Persero) (Official)</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Nov 2025 -
+                            Present</span>
+                        <p class="mt-2 text-white-50">
+                            Operational support kunci di divisi Business Development. Menggabungkan analisis teknis
+                            (Spec Analysis) untuk narasi pemasaran, desain presentasi level eksekutif, dan pelaporan
+                            berbasis data untuk keputusan strategis.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Portofolio Item 2 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p2">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/agustus2.jpg" class="portfolio-image" alt="Image 2">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/agustus2.JPG')">
-                            <h5>A Girl and 'Kerupuk'</h5>
-                            <p>Lomba Kerupuk - Agustusan 2022</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portofolio Item 3 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p3">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/best.jpg" class="portfolio-image" alt="Image 3">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/best.jpg')">
-                            <h5>Sillhoutte Sunset</h5>
-                            <p>Siluet di depan danau buatan</p>
-                        </div>
+                <!-- Item 2: Codingo Singapore -->
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>Programmer (Freelance)</h4>
+                        <p class="text-primary mb-1">Codingo Singapore</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Nov 2025 -
+                            Present</span>
+                        <p class="mt-2 text-white-50">Bekerja secara remote sebagai Programmer untuk klien
+                            internasional.</p>
                     </div>
                 </div>
 
-                <!-- Portofolio Item 4 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p4">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/frame.jpg" class="portfolio-image" alt="Image 4">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/frame.jpg')">
-                            <h5>Pray on Frame</h5>
-                            <p>Implementasi teknik Framing</p>
-                        </div>
+                <!-- Item 3: PT Len Industri - Intern -->
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>Strategic Transformation Officer (Intern)</h4>
+                        <p class="text-primary mb-1">PT Len Industri (Persero) (Official)</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Sep 2025 - Nov
+                            2025</span>
+                        <p class="mt-2 text-white-50">Mengembangkan Dashboard Monitoring Program berbasis Website
+                            menggunakan Next.js dan Strapi Headless CMS. Mengonfigurasi automasi data dan filtering
+                            database.</p>
                     </div>
                 </div>
 
-                <!-- Portofolio Item 5 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p5">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/lowlight.jpg" class="portfolio-image" alt="Image 5">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/lowlight.jpg')">
-                            <h5>Lay Low Bussiness</h5>
-                            <p>Implementasi Low-light shoot di Indoor</p>
-                        </div>
+                <!-- Item 4: Dicoding Community -->
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>Community Builder</h4>
+                        <p class="text-primary mb-1">Dicoding Community Network UIN SGD Bandung</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Sep 2025 -
+                            Present</span>
+                        <p class="mt-2 text-white-50">Membangun komunitas developer dan memfasilitasi kegiatan
+                            belajar.</p>
                     </div>
                 </div>
 
-                <!-- Portofolio Item 6 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p6">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail//lowlight2.jpg" class="portfolio-image" alt="Image 6">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/lowlight2.jpg')">
-                            <h5>Getting ready</h5>
-                            <p>Implementasi Low-light shoot di Outdoor</p>
-                        </div>
+                <!-- Item 5: HIMATIF -->
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>Lead of KOMINFO Division</h4>
+                        <p class="text-primary mb-1">HIMATIF UIN SGD Bandung</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Mar 2025 - Jan
+                            2026</span>
+                        <p class="mt-2 text-white-50">Memimpin divisi komunikasi dan informasi, strategi media
+                            sosial, dan desain grafis organisasi.</p>
                     </div>
                 </div>
 
-                <!-- Portofolio Item 7 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p7">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/lowlight3.jpg" class="portfolio-image" alt="Image 7">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/lowlight3.jpg')">
-                            <h5>Nightscape on Bandung</h5>
-                            <p>Low-light panorama di bukit Manglayang</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portofolio Item 8 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p8">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/panorama.jpg" class="portfolio-image" alt="Image 8">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/panorama.jpg')">
-                            <h5>Sunrise on Bandung</h5>
-                            <p>Indahnya matahari terbit di bukit Manglayang</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portofolio Item 9 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p9">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/art.jpg" class="portfolio-image" alt="Image 9">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/art.jpg')">
-                            <h5>Art on Selection</h5>
-                            <p>PMB Jalur Prestasi Kaligrafi UIN SGD Bandung</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portofolio Item 10 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p10">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/fast.jpg" class="portfolio-image" alt="Image 10">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/fast.jpg')">
-                            <h5>Tire-d of Bumpy</h5>
-                            <p>Foto dengan shutter cepat dengan fokus speedbump</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portofolio Item 11 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p11">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/tea.jpg" class="portfolio-image" alt="Image 11">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/tea.jpg')">
-                            <h5>Freshly Picked Tea</h5>
-                            <p>Pucuk teh dari Kebun Teh Lembang</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portofolio Item 12 -->
-                <div class="col-12 col-md-6 col-lg-3 fotografi" id="p12">
-                    <div class="portfolio-card">
-                        <img src="img/thumbnail/scary.jpg" class="portfolio-image" alt="Image 12">
-                        <div class="portfolio-description text-center" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/scary.jpg')">
-                            <h5>Dying Mister Mist</h5>
-                            <p>Kabut di tengah hutan Manglayang</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Removed Nested Row for Websites -->
-                <!-- Portofolio Website 1 -->
-                <div class="col-12 col-lg-6 website" id="w1">
-                    <div class="card">
-                        <img src="img/portofolio/perpus1.png" class="card-image" alt="website 1" data-bs-toggle="modal"
-                            data-bs-target="#imageModal" onclick="showImage('img/portofolio/perpus1.png')">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">E-Librarie</h5>
-                            <p>Sistem Manajemen Perpustakaan Digital dengan basis Bootstrap 4 dan Native PHP dengan
-                                fitur CRUD Buku dan Peminjaman dan User Privelege serta Image Inputter</p>
-                        </div>
+                <!-- Item 6: SABIT Academy -->
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>Programming Teacher</h4>
+                        <p class="text-primary mb-1">SABIT Academy</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Feb 2025 - Jun
+                            2025</span>
+                        <p class="mt-2 text-white-50">Mengajar kelas pemrograman dasar dan berpikir algoritma untuk
+                            15 siswa. Membimbing latihan coding dan proyek.</p>
                     </div>
                 </div>
 
-                <!-- Portofolio Website 2 -->
-                <div class="col-12 col-lg-6 website" id="w2">
-                    <div class="card">
-                        <img src="img/portofolio/gudang1.png" class="card-image" alt="website 2"
-                            data-bs-target="#imageModal" data-bs-toggle="modal"
-                            onclick="showImage('img/portofolio/gudang1.png')">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">V-Warehouse</h5>
-                            <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 8
-                                Dengan fitur CRUD Gudang dan User Privileges
-                            </p>
-
-                        </div>
+                <!-- Item 7: SAKTI Podcast -->
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>PIC Video Production</h4>
+                        <p class="text-primary mb-1">SAKTI Podcast Official</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Jul 2024 - Jun
+                            2025</span>
+                        <p class="mt-2 text-white-50">Koordinator Divisi Produksi Video. Mengelola tim, jadwal
+                            produksi, dan quality control konten sebelum upload.</p>
                     </div>
                 </div>
 
-                <!-- Portofolio Website 3 -->
-                <div class="col-12 col-lg-6 website" id="w1">
-                    <div class="card">
-                        <img src="img/portofolio/madokabook.png" class="card-image" alt="website 3"
-                            data-bs-target="#imageModal" data-bs-toggle="modal"
-                            onclick="showImage('img/portofolio/madokabook.png')">
-                        <div class="card-body text-center">
-                            <a href="https://akhmdrdlo.github.io/dicoding-bookshelf-js" target="_blank"
-                                class="text-primary text-decoration-none">
-                                <h5 class="card-title">Madoka Bookshelf</h5>
-                            </a>
-                            <p>Sistem Penataan Buku Bacaan dengan bahasa native Javascript yang memungkinkan Input
-                                dan Update Data secara Real-time</p>
-                            <a href="https://github.com/akhmdrdlo/dicoding-bookshelf-js" target="_blank">
-                                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                                    alt="GitHub" width="30" height="30">
-                            </a>
-                        </div>
+                <!-- Item 8: Bangkit Academy -->
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>Cloud Computing Cohort (Valedictorian)</h4>
+                        <p class="text-primary mb-1">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka
+                        </p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Sep 2024 - Jan
+                            2025</span>
+                        <p class="mt-2 text-white-50">Distinction Graduate & Valedictorian Speaker (Top Cohort).
+                            Juara 1 Soft Skills Challenge. Mempelajari GCP, Machine Learning API, dan memimpin tim
+                            Capstone "JejakBatik".</p>
                     </div>
                 </div>
 
-                <!-- Portofolio Website 4 -->
-                <div class="col-12 col-lg-6 website" id="w2">
-                    <div class="card">
-                        <img src="img/portofolio/swif-dashboard.png" class="card-image" alt="website 4"
-                            data-bs-target="#imageModal" data-bs-toggle="modal"
-                            onclick="showImage('img/portofolio/pedulidiri.png')">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">SWIF (Smart Warehouse Information Flow)</h5>
-                            <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 11
-                                Dilengkapi Track Record barang yang masuk dan keluar perbulan, Histori perubahan
-                                data,Invoice Pengiriman yang bisa di print secara langsung</p>
-                            <p><a href="https://drive.google.com/file/d/1uKlmvzDCdhC8juuvFRkVtR0IN9L_UjUH/view?usp=drive_link"
-                                    target="_blank">Link Demo Website</a></p>
-                        </div>
+                <!-- Item 9: LPM Suaka -->
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h4>IT Developer & Reporter</h4>
+                        <p class="text-primary mb-1">Lembaga Pers Mahasiswa Suaka</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Aug 2023 - Jan
+                            2025</span>
+                        <p class="mt-2 text-white-50">Mengelola website berita (Maintenance & Updates) serta meliput
+                            berita lapangan sebagai jurnalis foto.</p>
                     </div>
                 </div>
 
-                <!-- Portofolio Website 5 -->
-                <div class="col-12 col-lg-6 website" id="w1">
-                    <div class="card">
-                        <img src="img/portofolio/slearas.png" class="card-image" alt="website 4"
-                            data-bs-target="#imageModal" data-bs-toggle="modal"
-                            onclick="showImage('img/portofolio/pedulidiri.png')">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">SELARAS (Sistem Laporan Sarana Saintek)</h5>
-                            <p>
-                                Sebuah website pengaduan fasilitas yang diperuntukkan bagi masyarakat Saintek.
-                                Berperan menjadi Back-End Developer yang menginisiai fungsi seperti Ticketing dan
-                                Image Compressor.
-                            </p>
-                            <p><a href="https://drive.google.com/file/d/1vTm9NnZbjn__Y7Ilu5hwdO-GGDzNbLt_/view"
-                                    target="_blank">Link Demo Website</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portofolio Website 6 -->
-                <div class="col-12 col-lg-6 website" id="w2">
-                    <div class="card">
-                        <img src="img/portofolio/serayu-apps.png" class="card-image" alt="website 3"
-                            data-bs-target="#imageModal" data-bs-toggle="modal"
-                            onclick="showImage('img/portofolio/madokabook.png')">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Serayu Restoran Desktop Apps</h5>
-                            <p>Sistem Pemesanan Menu Restoran berbasis Aplikasi Desktop menggunakan Java JFrame GUI
-                            </p>
-                            <a href="https://github.com/akhmdrdlo/serayu_resto" target="_blank">
-                                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                                    alt="GitHub" width="30" height="30">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Removed Nested Row for Videos -->
-                <!-- Portofolio video 1 -->
-                <div class="col-12 col-lg-6 video" id="w1">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="portfolio-item">
-                                <div class="video-container d-flex flex-column gap-3">
-                                    <iframe class="w-100" height="200" loading="lazy"
-                                        src="https://www.youtube.com/embed/t6gmjf0Fw3U?si=s9e1Hrm8wUlc1Yr7"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                                        style="border:0; border-radius: 8px;"></iframe>
-                                    <iframe class="w-100" height="200" loading="lazy"
-                                        src="https://www.youtube.com/embed/FN5jHHXKp8o?si=acwtI53BWduXvPTM"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                                        style="border:0; border-radius: 8px;"></iframe>
-                                </div>
-                                <h6 class="card-title mt-3">Event Video Editor</h6>
-                                <p>Menjadi Main Video Editor dalam berbagai event Jurusan, serta diamanahi
-                                    menjadi
-                                    Video Editor dalam projek Video Profile Jurusan Teknik Informatika UIN SGD
-                                    Bandung</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portofolio video 2 -->
-                <div class="col-12 col-lg-6 video" id="w2">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="portfolio-item">
-                                <div class="video-container d-flex flex-column gap-3">
-                                    <iframe class="w-100" height="200" loading="lazy"
-                                        src="https://drive.google.com/file/d/1TGPXske5EIIA3fvWSHf0mjqDHNB65R57/preview"
-                                        allowfullscreen style="border:0; border-radius: 8px;"></iframe>
-                                    <iframe class="w-100" height="200" loading="lazy"
-                                        src="https://drive.google.com/file/d/15c5X3eyD1oGL2ltWaaPc9nICMxAUJUnQ/preview"
-                                        allowfullscreen style="border:0; border-radius: 8px;"></iframe>
-                                </div>
-                                <h6 class="card-title mt-3">SAKTI Production Animated Bumper</h6>
-                                <p>Hasil video selama menjadi Penanggungjawab Video Editor di SAKTI Production
-                                    Informatika <br>Digunakan sebagai Opening dalam tiap video Podcast yang
-                                    dirilis
-                                    di <a href="https://www.youtube.com/@teknikinformatikauinbandung">Informatika
-                                        UIN Bandung Channel</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portofolio video 3 -->
-                <div class="col-12 col-lg-6 video" id="w3">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="portfolio-item">
-                                <div class="video-container d-flex flex-column gap-3">
-                                    <iframe class="w-100" height="200" title="Video Portfolio" loading="lazy"
-                                        src="https://drive.google.com/file/d/1yM8rFMdzFRl3Shw1pyq2iBLEWnWmGebO/preview"
-                                        allowfullscreen style="border:0; border-radius: 8px;"></iframe>
-                                    <iframe class="w-100" height="200" title="Video Portfolio" loading="lazy"
-                                        src="https://drive.google.com/file/d/1Wq6NBSFMMivUPWmbe2bLdrgw6x0j7ewg/preview"
-                                        allowfullscreen style="border:0; border-radius: 8px;"></iframe>
-                                </div>
-                                <h6 class="card-title mt-3">IT Fair Animated Series</h6>
-                                <p>Hasil video selama menjadi Kepala Divisi bagian PDD dalam suatu acara besar
-                                    di
-                                    Jurusan yaitu IT FAIR XIII</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Removed Extra Closing Divs -->
-            </div>
-
-            <!-- Modal Gallery-->
-            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg text-center">
-                    <div class="modal-body text-center">
-                        <!-- Large image to display -->
-                        <img src="" class="img-fluid img-hd" id="largeImage" alt="Large Image">
+                <!-- Item 10: Freelance -->
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h4>Freelance Videographer</h4>
+                        <p class="text-primary mb-1">Professional Freelance</p>
+                        <span class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Sep 2021 -
+                            Present</span>
+                        <p class="mt-2 text-white-50">4 tahun pengalaman. Video Editor & DoP untuk berbagai proyek:
+                            Profil Video Jurusan, Wedding, Event Dokumentasi, dan Iklan Komersial.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="kontak col-md-12 px-4" id="kontak">
-            <h3 class="font-weight-bolder text-uppercase text-center pt-4">kontak saya</h3>
-            <hr>
-            <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 my-5 social-links">
-                <a href="https://www.instagram.com/akhmdrdlo/" target="_blank" class="social-icon glass-icon"
-                    aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:akhmadd432@gmail.com" target="_blank" class="social-icon glass-icon" aria-label="Email">
-                    <i class="fa fa-envelope-o"></i>
-                </a>
-                <a href="https://www.github.com/akhmdrdlo" target="_blank" class="social-icon glass-icon"
-                    aria-label="GitHub">
-                    <i class="fa fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/akhmdrdlo/" target="_blank" class="social-icon glass-icon"
-                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.youtube.com/@sirkelmaju_ch" target="_blank" class="social-icon glass-icon"
-                    aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.shutterstock.com/g/Akhmad+Ridlo" target="_blank" class="social-icon glass-icon"
-                    aria-label="Shutterstock" title="Shutterstock">
-                    <i class="fas fa-camera"></i>
-                </a>
-                <a href="https://www.dreamstime.com/akhmdrdlo25_info" target="_blank" class="social-icon glass-icon"
-                    aria-label="Dreamstime" title="Dreamstime">
-                    <i class="fas fa-images"></i>
-                </a>
-            </div>
-            <div class="row">
-                <div class="col-md-12 mt-2 text-center">
-                    <h6>Copyright &copy;
-                        <script> document.write(new Date().getFullYear()); </script> - developed by <a
-                            href="https://www.github.com/akhmdrdlo" target="_blank"
-                            style="text-decoration: none; color: white;" rel="noopener noreferrer">
-                            Akhmad Ridlo Rifa'i
-                        </a>
-                    </h6>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section py-5" id="certifications">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">
+                <span class="gradient-text">Sertifikasi & Pencapaian</span>
+            </h2>
+            <div class="row g-4 text-center justify-content-center">
+                <!-- Google ACE -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-card h-100">
+                        <div class="cert-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h5>Associate Cloud Engineer</h5>
+                        <p class="text-muted">Google</p>
+                        <span class="badge bg-success bg-opacity-75">Certified (Apr 2025)</span>
+                    </div>
+                </div>
+
+                <!-- Menjadi Google Cloud Engineer -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-card h-100">
+                        <div class="cert-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h5>Menjadi Google Cloud Engineer</h5>
+                        <p class="text-muted">Dicoding Indonesia</p>
+                        <span class="badge bg-primary bg-opacity-75">Certified (Nov 2024)</span>
+                    </div>
+                </div>
+
+                <!-- Applied Machine Learning -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="cert-card h-100">
+                        <div class="cert-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5>Applied ML in Google Cloud</h5>
+                        <p class="text-muted">Dicoding Indonesia</p>
+                        <span class="badge bg-primary bg-opacity-75">Completed (Des 2024)</span>
+                    </div>
+                </div>
+
+                <!-- TOEFA -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="cert-card h-100">
+                        <div class="cert-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h5>TOEFA English (Score 570)</h5>
+                        <p class="text-muted">UIN Sunan Gunung Djati</p>
+                        <span class="badge bg-warning bg-opacity-75">Proficient (Nov 2024)</span>
+                    </div>
+                </div>
+
+                <!-- UX Design -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                    <div class="cert-card h-100">
+                        <div class="cert-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h5>Fundamental UX Design</h5>
+                        <p class="text-muted">Dicoding Indonesia</p>
+                        <span class="badge bg-primary bg-opacity-75">Completed (Apr 2025)</span>
+                    </div>
+                </div>
+
+                <!-- Linux Essentials -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                    <div class="cert-card h-100">
+                        <div class="cert-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <h5>NDG Linux Essentials</h5>
+                        <p class="text-muted">Cisco Networking Academy</p>
+                        <span class="badge bg-success bg-opacity-75">Certified (Jul 2024)</span>
+                    </div>
+                </div>
+
+                <!-- Google Play -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+                    <div class="cert-card h-100">
+                        <div class="cert-icon">
+                            <i class="fab fa-google-play"></i>
+                        </div>
+                        <h5>Google Play Store Listing</h5>
+                        <p class="text-muted">Google Play Academy</p>
+                        <span class="badge bg-success bg-opacity-75">Certified (Mar 2024)</span>
+                    </div>
+                </div>
+
+                <!-- Basic AI -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+                    <div class="cert-card h-100">
+                        <div class="cert-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h5>Belajar Dasar AI</h5>
+                        <p class="text-muted">Dicoding Indonesia</p>
+                        <span class="badge bg-primary bg-opacity-75">Completed (Nov 2024)</span>
+                    </div>
                 </div>
             </div>
-        </footer>
-        <!-- Back to Top Button -->
-        <a href="#" class="back-to-top" id="backToTop">
-            <i class="fas fa-arrow-up"></i>
-        </a>
+        </div>
+    </section>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script src="script.js"></script>
+    <hr>
+
+    <!-- NEW SKILLS SECTION WITH UPDATED KEYWORDS -->
+    <section class="skills-section py-5" id="skill" data-aos="fade-up">
+        <div class="container">
+            <div class="glass-panel skill col-md-12 px-4">
+                <h3 class="text-center mb-5"><span class="gradient-text">SKILLS & EXPERTISE</span></h3>
+                <div class="row g-4 justify-content-center">
+                    <!-- Strategic & Operations -->
+                    <div class="col-lg-6">
+                        <div class="skill-category-card h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-chart-line fa-2x text-primary me-3"></i>
+                                <h4 class="mb-0">Strategic & Operations</h4>
+                            </div>
+                            <p class="text-muted mb-4 opacity-75">Business Analysis, Management & Strategic Planning</p>
+
+                            <div class="skill-group mb-3">
+                                <h6 class="text-uppercase text-secondary small fw-bold">Business & Strategy</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge glass-badge">Data Analysis</span>
+                                    <span class="badge glass-badge">Business Analysis</span>
+                                    <span class="badge glass-badge">Market Analysis</span>
+                                    <span class="badge glass-badge">IT Strategy</span>
+                                    <span class="badge glass-badge">Marketing</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-group mb-3">
+                                <h6 class="text-uppercase text-secondary small fw-bold">Management & Soft Skills</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge glass-badge">Project Management</span>
+                                    <span class="badge glass-badge">Team Leadership</span>
+                                    <span class="badge glass-badge">Agile Methodology</span>
+                                    <span class="badge glass-badge">Public Speaking</span>
+                                    <span class="badge glass-badge">Teaching</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-group">
+                                <h6 class="text-uppercase text-secondary small fw-bold">Administration</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge glass-badge">Data Visualization</span>
+                                    <span class="badge glass-badge">HR Development</span>
+                                    <span class="badge glass-badge">Report Writing</span>
+                                    <span class="badge glass-badge">Office Suite</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creative & Technology -->
+                    <div class="col-lg-6">
+                        <div class="skill-category-card h-100">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-laptop-code fa-2x text-warning me-3"></i>
+                                <h4 class="mb-0">Creative & Technology</h4>
+                            </div>
+                            <p class="text-muted mb-4 opacity-75">Multimedia Production & Cloud Computing</p>
+
+                            <div class="skill-group mb-3">
+                                <h6 class="text-uppercase text-secondary small fw-bold">Video Production</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge glass-badge">Video Editing</span>
+                                    <span class="badge glass-badge">Videography</span>
+                                    <span class="badge glass-badge">Post-Production</span>
+                                    <span class="badge glass-badge">Premiere Pro</span>
+                                    <span class="badge glass-badge">After Effects</span>
+                                    <span class="badge glass-badge">DaVinci Resolve</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-group mb-3">
+                                <h6 class="text-uppercase text-secondary small fw-bold">Design & Graphics</h6>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge glass-badge">Graphic Design</span>
+                                    <span class="badge glass-badge">Logo Design</span>
+                                    <span class="badge glass-badge">UI/UX Design</span>
+                                    <span class="badge glass-badge">Figma</span>
+                                    <span class="badge glass-badge">Canva</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-group">
+                                <h6 class="text-uppercase text-secondary small fw-bold">Software & Cloud</h6>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge glass-badge">Cloud Computing</span>
+                                    <span class="badge glass-badge">Redis</span>
+                                    <span class="badge glass-badge">MySQL</span>
+                                    <span class="badge glass-badge">Linux</span>
+                                    <span class="badge glass-badge">Python</span>
+                                </div>
+
+                                <h6 class="text-uppercase text-secondary small fw-bold mb-3">Core Expertise (Animated)
+                                </h6>
+                                <div class="d-flex flex-column gap-3">
+                                    <!-- GCP Progress -->
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress-title">
+                                            <span>Google Cloud Platform (GCP ACE)</span>
+                                            <span class="skill-val">85%</span>
+                                        </div>
+                                        <div class="skill-progress-track">
+                                            <div class="skill-progress-fill" data-progress="85%"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Laravel 11 Progress -->
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress-title">
+                                            <span>Laravel Framework (v11)</span>
+                                            <span class="skill-val">90%</span>
+                                        </div>
+                                        <div class="skill-progress-track">
+                                            <div class="skill-progress-fill" data-progress="90%"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Next.js Progress -->
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress-title">
+                                            <span>Next.js & React Frontend</span>
+                                            <span class="skill-val">80%</span>
+                                        </div>
+                                        <div class="skill-progress-track">
+                                            <div class="skill-progress-fill" data-progress="80%"></div>
+                                        </div>
+                                    </div>
+                                    <!-- REST API Progress -->
+                                    <div class="skill-progress-wrapper">
+                                        <div class="skill-progress-title">
+                                            <span>RESTful API Development</span>
+                                            <span class="skill-val">95%</span>
+                                        </div>
+                                        <div class="skill-progress-track">
+                                            <div class="skill-progress-fill" data-progress="95%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="portfolio-section py-5" id="portfolio" data-aos="fade-up">
+        <div class="container">
+            <div class="glass-panel portfolio col-12">
+                <h3 class="text-primary text-center">PORTOFOLIO</h3>
+                <!-- Filter Bar -->
+                <div class="btn-group mb-3">
+                    <div class="btn align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
+                        <button type="button" class="btn btn-primary filter-btn active" data-filter="all">Semua</button>
+                    </div>
+                    <div class="btn align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
+                        <button type="button" class="btn btn-primary filter-btn"
+                            data-filter="fotografi">Fotografi</button>
+                    </div>
+                    <div class="btn align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
+                        <button type="button" class="btn btn-primary filter-btn" data-filter="website">Software</button>
+                    </div>
+                    <div class="btn align-items-center filter-bg" role="group" aria-label="Filter Portofolio">
+                        <button type="button" class="btn btn-primary filter-btn" data-filter="video">Videografi</button>
+                    </div>
+                </div>
+                <!-- Portofolio Items -->
+                <div class="row g-4 mb-5 justify-content-center">
+                    <!-- Portofolio Item 1 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p1">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/agustus1.jpg" class="portfolio-image" alt="Image 1"
+                                loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/agustus1.JPG', 'Chasing the Flag', 'Lomba Bendera - Agustusan 2022')">
+                                <h5>Chasing the Flag</h5>
+                                <p>Lomba Bendera - Agustusan 2022</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Item 2 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p2">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/agustus2.jpg" class="portfolio-image" alt="Image 2"
+                                loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/agustus2.JPG', 'A Girl and \'Kerupuk\'', 'Lomba Kerupuk - Agustusan 2022')">
+                                <h5>A Girl and 'Kerupuk'</h5>
+                                <p>Lomba Kerupuk - Agustusan 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portofolio Item 3 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p3">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/best.jpg" class="portfolio-image" alt="Image 3" loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/best.jpg', 'Silhouette Sunset', 'Siluet di depan danau buatan')">
+                                <h5>Sillhoutte Sunset</h5>
+                                <p>Siluet di depan danau buatan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Item 4 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p4">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/frame.jpg" class="portfolio-image" alt="Image 4" loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/frame.jpg', 'Pray on Frame', 'Implementasi teknik Framing')">
+                                <h5>Pray on Frame</h5>
+                                <p>Implementasi teknik Framing</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Item 5 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p5">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/lowlight.jpg" class="portfolio-image" alt="Image 5"
+                                loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/lowlight.jpg', 'Lay Low Business', 'Implementasi Low-light shoot di Indoor')">
+                                <h5>Lay Low Bussiness</h5>
+                                <p>Implementasi Low-light shoot di Indoor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Item 6 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p6">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/lowlight2.jpg" class="portfolio-image" alt="Image 6"
+                                loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/lowlight2.jpg', 'Getting Ready', 'Implementasi Low-light shoot di Outdoor')">
+                                <h5>Getting ready</h5>
+                                <p>Implementasi Low-light shoot di Outdoor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Item 7 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p7">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/lowlight3.jpg" class="portfolio-image" alt="Image 7"
+                                loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/lowlight3.jpg', 'Nightscape on Bandung', 'Low-light panorama di bukit Manglayang')">
+                                <h5>Nightscape on Bandung</h5>
+                                <p>Low-light panorama di bukit Manglayang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portofolio Item 8 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p8">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/panorama.jpg" class="portfolio-image" alt="Image 8"
+                                loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/panorama.jpg', 'Sunrise on Bandung', 'Indahnya matahari terbit di bukit Manglayang')">
+                                <h5>Sunrise on Bandung</h5>
+                                <p>Indahnya matahari terbit di bukit Manglayang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portofolio Item 9 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p9">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/art.jpg" class="portfolio-image" alt="Image 9" loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/art.jpg', 'Art on Selection', 'PMB Jalur Prestasi Kaligrafi UIN SGD Bandung')">
+                                <h5>Art on Selection</h5>
+                                <p>PMB Jalur Prestasi Kaligrafi UIN SGD Bandung</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portofolio Item 10 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p10">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/fast.jpg" class="portfolio-image" alt="Image 10" loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/fast.jpg', 'Tire-d of Bumpy', 'Foto dengan shutter cepat dengan fokus speedbump')">
+                                <h5>Tire-d of Bumpy</h5>
+                                <p>Foto dengan shutter cepat dengan fokus speedbump</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portofolio Item 11 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p11">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/tea.jpg" class="portfolio-image" alt="Image 11" loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/tea.jpg', 'Freshly Picked Tea', 'Pucuk teh dari Kebun Teh Lembang')">
+                                <h5>Freshly Picked Tea</h5>
+                                <p>Pucuk teh dari Kebun Teh Lembang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portofolio Item 12 -->
+                    <div class="col-12 col-md-6 col-lg-3 fotografi" id="p12">
+                        <div class="portfolio-card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 350 250' fill='%23121620'></svg>"
+                                data-src="img/thumbnail/scary.jpg" class="portfolio-image" alt="Image 12"
+                                loading="lazy">
+                            <div class="portfolio-description text-center" data-bs-toggle="modal"
+                                data-bs-target="#projectModal"
+                                onclick="showImage('img/portofolio/scary.jpg', 'Dying Mister Mist', 'Kabut di tengah hutan Manglayang')">
+                                <h5>Dying Mister Mist</h5>
+                                <p>Kabut di tengah hutan Manglayang</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Removed Nested Row for Websites --                <!-- Portofolio Website 1 -->
+                    <div class="col-12 col-lg-6 website" id="w1">
+                        <div class="card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300' fill='%23121620'></svg>"
+                                data-src="img/portofolio/perpus1.png" class="card-image" alt="website 1"
+                                data-bs-toggle="modal" data-bs-target="#projectModal"
+                                onclick="showProjectDetails('img/portofolio/perpus1.png', 'E-Librarie', 'Sistem Manajemen Perpustakaan Digital dengan basis Bootstrap 4 dan Native PHP dengan fitur CRUD Buku, Peminjaman, dan Privilese Pengguna.', ['PHP Native', 'MySQL', 'Bootstrap 4', 'CRUD'], '', '')"
+                                loading="lazy">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">E-Librarie</h5>
+                                <p>Sistem Manajemen Perpustakaan Digital dengan basis Bootstrap 4 dan Native PHP dengan
+                                    fitur CRUD Buku dan Peminjaman dan User Privelege serta Image Inputter</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Website 2 -->
+                    <div class="col-12 col-lg-6 website" id="w2">
+                        <div class="card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300' fill='%23121620'></svg>"
+                                data-src="img/portofolio/gudang1.png" class="card-image" alt="website 2"
+                                data-bs-target="#projectModal" data-bs-toggle="modal"
+                                onclick="showProjectDetails('img/portofolio/gudang1.png', 'V-Warehouse', 'Sistem Manajemen Gudang Virtual berbasis Laravel 8 & Bootstrap 5 dengan manajemen database gudang dan hak akses pengguna.', ['Laravel 8', 'MySQL', 'Bootstrap 5', 'Back-End'], '', '')"
+                                loading="lazy">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">V-Warehouse</h5>
+                                <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 8
+                                    Dengan fitur CRUD Gudang dan User Privileges
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Website 3 -->
+                    <div class="col-12 col-lg-6 website" id="w1">
+                        <div class="card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300' fill='%23121620'></svg>"
+                                data-src="img/portofolio/madokabook.png" class="card-image" alt="website 3"
+                                data-bs-target="#projectModal" data-bs-toggle="modal"
+                                onclick="showProjectDetails('img/portofolio/madokabook.png', 'Madoka Bookshelf', 'Aplikasi manajemen buku perpustakaan pribadi dengan penyimpanan lokal (localStorage) menggunakan JavaScript native.', ['JavaScript Native', 'HTML5', 'CSS3', 'localStorage'], 'https://akhmdrdlo.github.io/dicoding-bookshelf-js', 'https://github.com/akhmdrdlo/dicoding-bookshelf-js')"
+                                loading="lazy">
+                            <div class="card-body text-center">
+                                <a href="https://akhmdrdlo.github.io/dicoding-bookshelf-js" target="_blank"
+                                    class="text-primary text-decoration-none">
+                                    <h5 class="card-title">Madoka Bookshelf</h5>
+                                </a>
+                                <p>Sistem Penataan Buku Bacaan dengan bahasa native Javascript yang memungkinkan Input
+                                    dan Update Data secara Real-time</p>
+                                <a href="https://github.com/akhmdrdlo/dicoding-bookshelf-js" target="_blank">
+                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                                        alt="GitHub" width="30" height="30">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Website 4 -->
+                    <div class="col-12 col-lg-6 website" id="w2">
+                        <div class="card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300' fill='%23121620'></svg>"
+                                data-src="img/portofolio/swif-dashboard.png" class="card-image" alt="website 4"
+                                data-bs-target="#projectModal" data-bs-toggle="modal"
+                                onclick="showProjectDetails('img/portofolio/swif-dashboard.png', 'SWIF (Smart Warehouse Information Flow)', 'Sistem manajemen alur gudang pintar dengan Laravel 11. Dilengkapi pelacakan barang, histori perubahan data, dan ekspor invoice PDF.', ['Laravel 11', 'MySQL', 'Bootstrap 5', 'PDF Export'], 'https://drive.google.com/file/d/1uKlmvzDCdhC8juuvFRkVtR0IN9L_UjUH/view?usp=drive_link', '')"
+                                loading="lazy">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">SWIF (Smart Warehouse Information Flow)</h5>
+                                <p>Sistem Manajemen Gudang Virtual dengan basis Bootstrap 5 dan Framework Laravel 11
+                                    Dilengkapi Track Record barang yang masuk dan keluar perbulan, Histori perubahan
+                                    data,Invoice Pengiriman yang bisa di print secara langsung</p>
+                                <p><a href="https://drive.google.com/file/d/1uKlmvzDCdhC8juuvFRkVtR0IN9L_UjUH/view?usp=drive_link"
+                                        target="_blank">Link Demo Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio Website 5 -->
+                    <div class="col-12 col-lg-6 website" id="w1">
+                        <div class="card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300' fill='%23121620'></svg>"
+                                data-src="img/portofolio/slearas.png" class="card-image" alt="website 5"
+                                data-bs-target="#projectModal" data-bs-toggle="modal"
+                                onclick="showProjectDetails('img/portofolio/slearas.png', 'SELARAS (Sistem Laporan Sarana Saintek)', 'Website pengaduan fasilitas kampus Fakultas Sains dan Teknologi. Berperan sebagai Backend Developer untuk fungsi ticketing dan kompresi gambar.', ['Laravel', 'MySQL', 'Bootstrap 5', 'Ticketing System'], 'https://drive.google.com/file/d/1vTm9NnZbjn__Y7Ilu5hwdO-GGDzNbLt_/view', '')"
+                                loading="lazy">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">SELARAS (Sistem Laporan Sarana Saintek)</h5>
+                                <p>
+                                    Sebuah website pengaduan fasilitas yang diperuntukkan bagi masyarakat Saintek.
+                                    Berperan menjadi Back-End Developer yang menginisiai fungsi seperti Ticketing dan
+                                    Image Compressor.
+                                </p>
+                                <p><a href="https://drive.google.com/file/d/1vTm9NnZbjn__Y7Ilu5hwdO-GGDzNbLt_/view"
+                                        target="_blank">Link Demo Website</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portofolio Website 6 -->
+                    <div class="col-12 col-lg-6 website" id="w2">
+                        <div class="card">
+                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300' fill='%23121620'></svg>"
+                                data-src="img/portofolio/serayu-apps.png" class="card-image" alt="website 6"
+                                data-bs-target="#projectModal" data-bs-toggle="modal"
+                                onclick="showProjectDetails('img/portofolio/serayu-apps.png', 'Serayu Restoran Desktop Apps', 'Sistem pemesanan menu restoran berbasis Java Swing (Desktop App) dengan antarmuka grafis (GUI) yang interaktif.', ['Java', 'JFrame Swing', 'Desktop App', 'MySQL'], '', 'https://github.com/akhmdrdlo/serayu_resto')"
+                                loading="lazy">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Serayu Restoran Desktop Apps</h5>
+                                <p>Sistem Pemesanan Menu Restoran berbasis Aplikasi Desktop menggunakan Java JFrame GUI
+                                </p>
+                                <a href="https://github.com/akhmdrdlo/serayu_resto" target="_blank">
+                                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                                        alt="GitHub" width="30" height="30">
+                                </a>
+                            </div>
+                        </div>
+                    </div>iv>
+                    <!-- Removed Nested Row for Videos -->
+                    <!-- Portofolio video 1 -->
+                    <div class="col-12 col-lg-6 video" id="w1">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="portfolio-item">
+                                    <div class="video-container d-flex flex-column gap-3">
+                                        <iframe class="w-100" height="200" loading="lazy"
+                                            src="https://www.youtube.com/embed/t6gmjf0Fw3U?si=s9e1Hrm8wUlc1Yr7"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                            style="border:0; border-radius: 8px;"></iframe>
+                                        <iframe class="w-100" height="200" loading="lazy"
+                                            src="https://www.youtube.com/embed/FN5jHHXKp8o?si=acwtI53BWduXvPTM"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                            style="border:0; border-radius: 8px;"></iframe>
+                                    </div>
+                                    <h6 class="card-title mt-3">Event Video Editor</h6>
+                                    <p>Menjadi Main Video Editor dalam berbagai event Jurusan, serta diamanahi
+                                        menjadi
+                                        Video Editor dalam projek Video Profile Jurusan Teknik Informatika UIN SGD
+                                        Bandung</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portofolio video 2 -->
+                    <div class="col-12 col-lg-6 video" id="w2">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="portfolio-item">
+                                    <div class="video-container d-flex flex-column gap-3">
+                                        <iframe class="w-100" height="200" loading="lazy"
+                                            src="https://drive.google.com/file/d/1TGPXske5EIIA3fvWSHf0mjqDHNB65R57/preview"
+                                            allowfullscreen style="border:0; border-radius: 8px;"></iframe>
+                                        <iframe class="w-100" height="200" loading="lazy"
+                                            src="https://drive.google.com/file/d/15c5X3eyD1oGL2ltWaaPc9nICMxAUJUnQ/preview"
+                                            allowfullscreen style="border:0; border-radius: 8px;"></iframe>
+                                    </div>
+                                    <h6 class="card-title mt-3">SAKTI Production Animated Bumper</h6>
+                                    <p>Hasil video selama menjadi Penanggungjawab Video Editor di SAKTI Production
+                                        Informatika <br>Digunakan sebagai Opening dalam tiap video Podcast yang
+                                        dirilis
+                                        di <a href="https://www.youtube.com/@teknikinformatikauinbandung">Informatika
+                                            UIN Bandung Channel</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Portofolio video 3 -->
+                    <div class="col-12 col-lg-6 video" id="w3">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="portfolio-item">
+                                    <div class="video-container d-flex flex-column gap-3">
+                                        <iframe class="w-100" height="200" title="Video Portfolio" loading="lazy"
+                                            src="https://drive.google.com/file/d/1yM8rFMdzFRl3Shw1pyq2iBLEWnWmGebO/preview"
+                                            allowfullscreen style="border:0; border-radius: 8px;"></iframe>
+                                        <iframe class="w-100" height="200" title="Video Portfolio" loading="lazy"
+                                            src="https://drive.google.com/file/d/1Wq6NBSFMMivUPWmbe2bLdrgw6x0j7ewg/preview"
+                                            allowfullscreen style="border:0; border-radius: 8px;"></iframe>
+                                    </div>
+                                    <h6 class="card-title mt-3">IT Fair Animated Series</h6>
+                                    <p>Hasil video selama menjadi Kepala Divisi bagian PDD dalam suatu acara besar
+                                        di
+                                        Jurusan yaitu IT FAIR XIII</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Removed Extra Closing Divs -->
+                </div>
+
+                <!-- Modal Gallery-->
+                <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content modal-content-custom">
+                            <div class="modal-body p-0 position-relative">
+                                <button type="button"
+                                    class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3"
+                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                <img src="" class="img-fluid w-100" id="largeImage" alt="Large Image"
+                                    style="max-height: 75vh; object-fit: contain;">
+                            </div>
+                            <div class="modal-desc-panel text-start">
+                                <h4 id="modalTitle" class="gradient-text fw-bold">Judul Karya</h4>
+                                <p id="modalDescription">Deskripsi lengkap mengenai karya atau proyek portofolio
+                                    tersebut.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="kontak py-5" id="kontak">
+        <div class="container">
+            <div class="glass-panel px-4 py-5">
+                <h3 class="font-weight-bolder text-uppercase text-center mb-5">kontak saya</h3>
+                <div class="row g-5">
+                    <!-- Left: Info & Socials -->
+                    <div class="col-lg-5 d-flex flex-column justify-content-between text-start">
+                        <div>
+                            <h4 class="fw-bold mb-3"><span class="gradient-text">Hubungi Saya</span></h4>
+                            <p class="text-white-50 mb-4" style="font-size: 0.95rem; line-height: 1.6;">
+                                Hubungi saya melalui formulir di samping atau media sosial di bawah. Saya akan membalas
+                                pesan Anda secepatnya!
+                            </p>
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-envelope text-primary fa-lg me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold text-white">Email</h6>
+                                        <span class="copyable-email text-white-50" onclick="copyEmailToClipboard(this)"
+                                            title="Klik untuk menyalin email"
+                                            style="cursor: pointer; transition: color 0.3s ease;">
+                                            akhmadd432@gmail.com <i class="far fa-copy ms-1 text-primary small"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary fa-lg me-3"></i>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold text-white">Lokasi</h6>
+                                        <span class="text-white-50">Cileungsi, Bogor, Indonesia</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-3 text-white">Ikuti Saya</h6>
+                            <div class="d-flex flex-wrap gap-3 social-links">
+                                <a href="https://www.instagram.com/akhmdrdlo/" target="_blank"
+                                    class="social-icon glass-icon" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="mailto:akhmadd432@gmail.com" target="_blank" class="social-icon glass-icon"
+                                    aria-label="Email">
+                                    <i class="far fa-envelope"></i>
+                                </a>
+                                <a href="https://www.github.com/akhmdrdlo" target="_blank"
+                                    class="social-icon glass-icon" aria-label="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/akhmdrdlo/" target="_blank"
+                                    class="social-icon glass-icon" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@sirkelmaju_ch" target="_blank"
+                                    class="social-icon glass-icon" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://www.shutterstock.com/g/Akhmad+Ridlo" target="_blank"
+                                    class="social-icon glass-icon" aria-label="Shutterstock" title="Shutterstock">
+                                    <i class="fas fa-camera"></i>
+                                </a>
+                                <a href="https://www.dreamstime.com/akhmdrdlo25_info" target="_blank"
+                                    class="social-icon glass-icon" aria-label="Dreamstime" title="Dreamstime">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form -->
+                    <div class="col-lg-7">
+                        <form id="contactForm" class="contact-form text-start">
+                            <div class="mb-3">
+                                <label for="contactName" class="form-label fw-semibold text-white">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="contactName"
+                                    placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactEmail" class="form-label fw-semibold text-white">Alamat Email</label>
+                                <input type="email" class="form-control" id="contactEmail" placeholder="nama@email.com"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label fw-semibold text-white">Pesan</label>
+                                <textarea class="form-control" id="contactMessage" rows="5"
+                                    placeholder="Tuliskan pesan Anda..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-gradient w-100 py-3 mt-2">
+                                <i class="fas fa-paper-plane me-2"></i>Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <hr class="my-5 opacity-25">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h6>Copyright &copy;
+                            <script> document.write(new Date().getFullYear()); </script> - developed by <a
+                                href="https://www.github.com/akhmdrdlo" target="_blank"
+                                style="text-decoration: none; color: white;" rel="noopener noreferrer">Akhmad Ridlo
+                                Rifa'i</a>
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
