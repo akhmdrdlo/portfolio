@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/* ───────────── Brandkit tokens (docs/BRANDKIT.md) ───────────── */
+:root {
+  --bg-canvas: #eef4fb;
+  --bg-surface: #ffffff;
+  --bg-sky-panel: #c6dbf0;
+
+  --navy-primary: #223f6d;
+  --navy-deep: #162b4d;
+  --navy-muted: #4a6896;
+
+  --blue-pixel: #6a93c7;
+  --blue-sparkle: #9bbbe0;
+  --terracotta: #b84a39;
+  --cream-warm: #f3e7c9;
+
+  --ink-primary: #162b4d;
+  --ink-body: #334155;
+  --ink-inverse: #f8fafc;
+
+  --shadow-sticker: 0 12px 24px -8px rgba(22, 43, 77, 0.25);
+  --shadow-sticker-lift: 0 22px 36px -12px rgba(22, 43, 77, 0.35);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --color-canvas: var(--bg-canvas);
+  --color-surface: var(--bg-surface);
+  --color-sky: var(--bg-sky-panel);
+  --color-navy: var(--navy-primary);
+  --color-navy-deep: var(--navy-deep);
+  --color-navy-muted: var(--navy-muted);
+  --color-pixel: var(--blue-pixel);
+  --color-sparkle: var(--blue-sparkle);
+  --color-terracotta: var(--terracotta);
+  --color-cream: var(--cream-warm);
+  --color-ink: var(--ink-primary);
+  --color-ink-body: var(--ink-body);
+  --color-ink-inverse: var(--ink-inverse);
+
+  --font-display: var(--font-anton), "Arial Narrow", Impact, sans-serif;
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-sticker: var(--shadow-sticker);
+  --shadow-sticker-lift: var(--shadow-sticker-lift);
+  --ease-out-expo: var(--ease-out-expo);
+}
+
+/* ───────────── Base ───────────── */
+html {
+  background: var(--bg-canvas);
+  color: var(--ink-body);
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg-canvas);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--navy-primary);
+  color: var(--ink-inverse);
+}
+
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+/* ───────────── Type utilities ───────────── */
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  color: var(--ink-primary);
+}
+
+@utility text-hero {
+  font-size: clamp(3.2rem, 15vw, 13rem);
+}
+
+@utility text-h2 {
+  font-size: clamp(2.6rem, 7vw, 5.6rem);
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Masked line reveal: wrap each line in .line-mask > .line-inner */
+@utility line-mask {
+  display: block;
+  overflow: clip;
+  padding-block: 0.04em;
+}
+
+/* Diagonal navy cut block */
+@utility diagonal-cut {
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+}
+@utility diagonal-cut-reverse {
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+/* Stitched dashed frame (avatar) */
+@utility stitched {
+  border: 4px dashed var(--navy-deep);
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Preloader visibility is decided before paint by an inline script in layout.tsx */
+html[data-loaded] [data-preloader] {
+  display: none;
+}
+html:not([data-loaded]) body {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,6 +1,6 @@
 # Dependencies
 node_modules/
-package-lock.json
+# package-lock.json is committed
 yarn.lock
 
 # Vercel
@@ -24,3 +24,12 @@ npm-debug.log*
 .env
 .env.local
 .env.production
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Raw video sources (too big for git / deploy)
+media-src/

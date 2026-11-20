@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-akhmad-ridlo",
+  "version": "2.0.0",
+  "description": "Modern portfolio website with gradients and smooth animations",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "web-developer",
+    "cloud-engineer",
+    "photographer",
+    "videographer"
+  ],
+  "author": "Akhmad Ridlo Rifa'i",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akhmdrdlo/portfolio"
+  }
+}
