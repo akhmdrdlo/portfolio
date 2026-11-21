@@ -119,16 +119,16 @@ export function Tech() {
             eyebrow="Sisi teknik"
             title={
               <>
-                Bukan cuma visual,
+                Kerja di IT,
                 <br />
-                <span className="text-terracotta">sistemnya juga.</span>
+                <span className="text-terracotta">ngoding juga.</span>
               </>
             }
           />
           <div className="flex flex-col gap-4" data-reveal>
             <p className="text-lg leading-relaxed text-ink-body">
-              Sehari-hari aku <strong className="text-ink">Business Development IT Support di PT Len Industri (Persero)</strong>: membedah spesifikasi teknis produk,
-              riset pasar, lalu menerjemahkannya jadi presentasi dan proposal level eksekutif. Di luar itu aku bangun website dan sistem pakai Next.js & Laravel.
+              Di PT Len Industri (Persero) aku Business Development IT Support. Aku menganalisis spesifikasi produk dan pesaingnya untuk presentasi dan proposal tender,
+              dan membangun dashboard monitoring internal pakai Next.js dan Strapi. Proyek website lain aku kerjakan pakai Next.js dan Laravel.
             </p>
             <ul className="flex flex-wrap gap-2">
               {techStack.map((t) => (
@@ -142,12 +142,12 @@ export function Tech() {
         </div>
 
         {/* Achievements */}
-        <ul className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <ul className="-mx-4 mt-16 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 pt-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 lg:grid-cols-5">
           {achievements.map((a, i) => (
             <li
               key={a.title}
               data-reveal
-              className={`relative flex flex-col gap-2 border-4 border-surface p-5 shadow-sticker ${i === 0 ? "bg-navy-deep text-ink-inverse" : "bg-surface"}`}
+              className={`relative flex w-[78vw] max-w-[300px] shrink-0 snap-start flex-col gap-2 border-4 border-surface p-5 shadow-sticker sm:w-auto sm:max-w-none ${i === 0 ? "bg-navy-deep text-ink-inverse" : "bg-surface"}`}
               style={{ rotate: `${[-1.5, 1, -0.5, 1.5, -1][i] ?? 0}deg` }}
             >
               <span className={`display text-4xl ${i === 0 ? "!text-ink-inverse" : "text-navy"}`}>{a.value}</span>
@@ -163,12 +163,12 @@ export function Tech() {
             Proyek <span className="text-terracotta">software</span>
           </h3>
           <p className="max-w-sm text-sm text-navy-muted" data-reveal>
-            Dari dashboard korporat sampai aplikasi kampus. Angka dampak diambil dari hasil tiap proyek.
+            Dari dashboard internal PT Len sampai aplikasi untuk kampus dan UMKM.
           </p>
         </div>
-        <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
+        <ul className="-mx-4 mt-8 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:overflow-visible sm:px-0 md:gap-8 lg:grid-cols-3">
           {list.map((p) => (
-            <li key={p.id}>
+            <li key={p.id} className="w-[82vw] max-w-[340px] shrink-0 snap-start sm:w-auto sm:max-w-none">
               <ProjectCard p={p} />
             </li>
           ))}

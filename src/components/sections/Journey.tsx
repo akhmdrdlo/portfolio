@@ -32,7 +32,7 @@ export function Journey() {
         <div className="md:sticky md:top-28 md:self-start">
           <SectionHeading index="05" eyebrow="Perjalanan" title={<>Dari kamera<br />ke <span className="text-terracotta">timeline.</span></>} />
           <p className="mt-6 max-w-sm text-ink-body" data-reveal>
-            Bukan jalan lurus, tapi tiap belokan nambah satu skill. Ini yang membentuk caraku kerja hari ini.
+            Organisasi dan kerjaan yang paling banyak ngajarin aku soal desain dan video.
           </p>
         </div>
 

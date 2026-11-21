@@ -17,7 +17,7 @@ const description =
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name} — ${site.role}`, template: `%s · ${site.name}` },
+  title: { default: `${site.name} · ${site.role}`, template: `%s · ${site.name}` },
   description,
   authors: [{ name: site.name }],
   keywords: ["desain grafis Bandung", "video editor Bandung", "jasa desain poster", "company profile", "logo UMKM", "motion graphic", "Akhmad Ridlo"],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: site.url,
-    title: `${site.name} — ${site.role}`,
+    title: `${site.name} · ${site.role}`,
     description,
     images: [{ url: "/me/ridlo-avatar.webp", width: 747, height: 1000, alt: site.name }],
   },

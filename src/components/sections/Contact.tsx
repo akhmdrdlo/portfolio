@@ -41,7 +41,7 @@ export function Contact() {
               ngobrol <span className="text-terracotta">dulu!</span>
             </h2>
             <p className="mt-8 max-w-lg text-lg text-ink-inverse/85" data-reveal>
-              Mau konsultasi konsep dulu atau langsung pesan paket? Dua-duanya boleh, chat aja. Biasanya aku balas di hari yang sama.
+              Mau konsultasi konsep dulu atau langsung pesan paket? Dua-duanya boleh, chat aja.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-2" data-reveal>

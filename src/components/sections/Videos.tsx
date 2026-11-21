@@ -107,7 +107,7 @@ export function Videos() {
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading index="03" eyebrow="Video & motion" inverse title={<>Biar ceritamu<br />bergerak.</>} />
             <div className="flex flex-col gap-4 md:items-end" data-reveal>
-              <p className="max-w-sm text-ink-inverse/80 md:text-right">Kirim rekaman mentahnya, aku olah jadi video yang betah ditonton. Klik untuk putar.</p>
+              <p className="max-w-sm text-ink-inverse/80 md:text-right">Kirim rekaman mentahnya, nanti aku edit. Klik video untuk putar.</p>
               <ul className="flex flex-wrap gap-2">
                 {videoCategories.map((c) => (
                   <li key={c.id}>

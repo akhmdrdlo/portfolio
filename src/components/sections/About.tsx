@@ -8,7 +8,7 @@ import { RevealSection } from "../motion";
 import { PixelCluster, Sparkle } from "../ornaments";
 
 const manifesto =
-  "Aku lulusan Teknik Informatika yang jatuh cinta sama visual. Sekarang aku menjembatani teknologi dan bisnis di PT Len Industri, dan di luar jam kantor aku desain, edit video, dan bikin website. Otak teknik bikin aku rapi soal struktur, tangan visual bikin hasilnya enak dilihat.";
+  "Aku lulusan Teknik Informatika UIN Bandung. Kerja utamaku sekarang di PT Len Industri. Dari 2021 aku juga terima proyek desain, video, dan website, kebanyakan dari organisasi kampus, UMKM, dan teman sendiri.";
 
 /** Words light up one by one as the paragraph scrolls through the viewport. */
 function ScrubText({ text }: { text: string }) {
@@ -30,7 +30,7 @@ function ScrubText({ text }: { text: string }) {
     { scope: ref },
   );
   return (
-    <p ref={ref} className="text-[clamp(1.5rem,3.2vw,2.6rem)] font-semibold leading-[1.25] tracking-[-0.01em] text-ink">
+    <p ref={ref} className="text-[clamp(1.2rem,3.2vw,2.6rem)] font-semibold leading-[1.25] tracking-[-0.01em] text-ink">
       {text.split(" ").map((w, i) => (
         <span key={i} data-word className="inline-block pr-[0.28em]">
           {w}

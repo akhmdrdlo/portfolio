@@ -97,7 +97,7 @@ function Showcase({ category }: { category: RateCategory }) {
     <div className="grid grid-cols-3 items-center gap-3 md:gap-6">
       {picks.map((w, i) => (
         <div key={w.id} className={i === 1 ? "md:-translate-y-4" : "md:translate-y-3"}>
-          <StickerCard image={w.image} alt={`${w.title} — ${w.client}`} tag={w.tag} tilt={[-3, 2, -1.5][i]} sizes="(min-width: 1024px) 16vw, 30vw" imageClassName="aspect-[4/5]" fit={w.category === "branding" ? "contain" : "cover"} />
+          <StickerCard image={w.image} alt={`${w.title}, ${w.client}`} tag={w.tag} tilt={[-3, 2, -1.5][i]} sizes="(min-width: 1024px) 16vw, 30vw" imageClassName={w.cutout ? "aspect-[4/5] bg-cream p-2" : "aspect-[4/5]"} fit={w.category === "branding" ? "contain" : "cover"} />
           {w.palette ? (
             <div className="mt-3 flex justify-center gap-1.5" aria-label={`Palet ${w.title}`}>
               {w.palette.map((c) => (

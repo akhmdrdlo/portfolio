@@ -33,3 +33,7 @@ next-env.d.ts
 
 # Raw video sources (too big for git / deploy)
 media-src/
+
+# Remotion showreel: footage clips & renders
+showreel/public/clips/
+showreel/out/

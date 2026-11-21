@@ -84,14 +84,12 @@ export function Works() {
             eyebrow="Karya pilihan"
             title={
               <>
-                Hasil yang <span className="text-terracotta">bicara</span>
-                <br />
-                sendiri.
+                Desain yang <span className="text-terracotta">sudah tayang.</span>
               </>
             }
           />
           <p className="max-w-sm text-ink-body" data-reveal>
-            Dari poster yang bikin berhenti scroll sampai logo yang gampang diingat. Klik salah satu buat lihat lebih dekat.
+            18 desain untuk klien, organisasi kampus, dan latihan sendiri. Klik untuk lihat lebih besar.
           </p>
         </div>
 
@@ -123,9 +121,9 @@ export function Works() {
           </LayoutGroup>
         </div>
 
-        <div ref={grid} className="mt-12 grid gap-6 md:gap-10" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
+        <div ref={grid} className="mt-12 grid gap-4 md:gap-10" style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}>
           {columns.map((col, ci) => (
-            <div key={ci} data-col className="flex flex-col gap-10 md:gap-14">
+            <div key={ci} data-col className="flex flex-col gap-8 md:gap-14">
               <AnimatePresence mode="popLayout">
                 {col.map((w, i) => (
                   <motion.button
@@ -139,7 +137,7 @@ export function Works() {
                     exit={{ opacity: 0, scale: 0.94 }}
                     transition={{ type: "spring", stiffness: 260, damping: 24 }}
                     className="group text-left"
-                    aria-label={`Lihat ${w.title} — ${w.client}`}
+                    aria-label={`Lihat ${w.title}, ${w.client}`}
                   >
                     <StickerCard
                       image={w.image}
@@ -147,13 +145,13 @@ export function Works() {
                       tag={w.tag}
                       tilt={TILTS[(ci * 3 + i) % TILTS.length]}
                       sizes="(min-width: 1024px) 30vw, 46vw"
-                      imageClassName="max-h-[560px]"
+                      imageClassName={w.cutout ? "max-h-[560px] bg-cream p-3 md:p-6" : "max-h-[560px]"}
                       fit={w.category === "branding" ? "contain" : "cover"}
                     />
-                    <span className="mt-4 flex items-start justify-between gap-3 px-1">
-                      <span>
-                        <span className="block font-bold text-ink transition-colors group-hover:text-terracotta">{w.title}</span>
-                        <span className="block text-sm text-navy-muted">{w.client}</span>
+                    <span className="mt-3 flex items-start justify-between gap-2 px-0.5 md:mt-4 md:gap-3 md:px-1">
+                      <span className="min-w-0">
+                        <span className="block text-sm font-bold leading-snug text-ink transition-colors group-hover:text-terracotta md:text-base">{w.title}</span>
+                        <span className="mt-0.5 block truncate text-xs text-navy-muted md:text-sm">{w.client}</span>
                       </span>
                       <ArrowUpRight size={18} className="mt-1 shrink-0 text-navy-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-terracotta" />
                     </span>
@@ -169,7 +167,7 @@ export function Works() {
         </p>
       </div>
 
-      <Modal open={!!active} onClose={() => setActive(null)} label={active ? `${active.title} — ${active.client}` : "Detail karya"}>
+      <Modal open={!!active} onClose={() => setActive(null)} label={active ? `${active.title}, ${active.client}` : "Detail karya"}>
         {active ? <WorkDetail work={active} /> : null}
       </Modal>
     </RevealSection>
@@ -178,18 +176,41 @@ export function Works() {
 
 function WorkDetail({ work }: { work: Work }) {
   const category = workCategories.find((c) => c.id === work.category)?.label;
+  const [shown, setShown] = useState(work.image);
   return (
     <div className="grid max-h-[88svh] overflow-y-auto bg-canvas md:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] md:overflow-hidden">
-      <div className="relative flex min-h-[40svh] items-center justify-center bg-navy-deep p-6 md:max-h-[88svh] md:p-10">
+      <div className={`relative flex min-h-[40svh] flex-col items-center justify-center gap-4 p-6 md:max-h-[88svh] md:p-10 ${work.cutout ? "bg-cream" : "bg-navy-deep"}`}>
         <Image
-          src={work.image.src}
-          alt={`${work.title} — ${work.client}`}
-          width={work.image.w}
-          height={work.image.h}
+          key={shown.src}
+          src={shown.src}
+          alt={`${work.title}, ${work.client}`}
+          width={shown.w}
+          height={shown.h}
           sizes="(min-width: 768px) 60vw, 100vw"
           quality={85}
-          className="max-h-[70svh] w-auto border-4 border-surface object-contain shadow-sticker-lift"
+          className={
+            work.cutout
+              ? "max-h-[56svh] w-auto object-contain drop-shadow-[0_18px_24px_rgba(22,43,77,0.25)]"
+              : "max-h-[70svh] w-auto border-4 border-surface object-contain shadow-sticker-lift"
+          }
         />
+        {work.gallery && work.gallery.length > 1 ? (
+          <ul className="flex flex-wrap justify-center gap-2" aria-label="Variasi">
+            {work.gallery.map((g, i) => (
+              <li key={g.src}>
+                <button
+                  type="button"
+                  onClick={() => setShown(g)}
+                  aria-label={`Variasi ${i + 1}`}
+                  aria-pressed={shown.src === g.src}
+                  className={`grid h-14 w-14 place-items-center rounded-lg border-2 bg-surface p-1 transition-colors ${shown.src === g.src ? "border-terracotta" : "border-transparent hover:border-navy-deep/30"}`}
+                >
+                  <Image src={g.src} alt="" width={g.w} height={g.h} sizes="56px" className="max-h-full w-auto object-contain" />
+                </button>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
       <div className="flex flex-col gap-6 p-6 md:overflow-y-auto md:p-10">
         <div>

@@ -38,7 +38,7 @@ export function Showreel() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-terracotta opacity-75 motion-reduce:hidden" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-terracotta" />
             </span>
-            Foto · Reels · Motion
+            Desain · Foto · Video · Web
           </p>
         </div>
 
@@ -48,11 +48,11 @@ export function Showreel() {
               src="/video/showreel-full.mp4"
               poster="/video/showreel-full.webp"
               lazy
-              label="Showreel Akhmad Ridlo Rifa'i: fotografi, reels, dan motion graphic"
+              label="Showreel Akhmad Ridlo Rifa'i: desain grafis, fotografi, video, dan web"
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
-          <span className="eyebrow absolute -top-3 left-4 bg-surface px-3 py-1 text-ink shadow-sticker">2021 — sekarang</span>
+          <span className="eyebrow absolute -top-3 left-4 bg-surface px-3 py-1 text-ink shadow-sticker">2021 – sekarang</span>
           <span data-reel-spark className="absolute -bottom-5 -right-3 text-terracotta md:-right-5">
             <Sparkle className="h-10 w-10 md:h-14 md:w-14" />
           </span>

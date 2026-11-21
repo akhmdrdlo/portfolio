@@ -18,7 +18,7 @@ export const site = {
   cv: "/cv-akhmad-ridlo.pdf",
   tagline: "Otak teknik, tangan visual.",
   intro:
-    "Halo! Aku Ridlo dari Bandung. Sehari-hari aku Business Development IT di PT Len Industri, di luar itu aku desain, edit video, dan bikin website. Visual yang enak dilihat, sistem yang beneran jalan.",
+    "Halo! Aku Ridlo dari Bandung. Sehari-hari aku kerja di PT Len Industri sebagai Business Development IT. Di luar jam kantor aku desain, edit video, dan bikin website.",
 } as const;
 
 export type Social = { label: string; href: string; handle: string };
@@ -42,46 +42,46 @@ export type Milestone = {
 /** Hanya pengalaman yang membentuk sisi visual & kreatif (sumber: CV LinkedIn, Nov 2026). */
 export const journey: Milestone[] = [
   {
-    period: "Sep 2021 — sekarang",
+    period: "Sep 2021 – sekarang",
     role: "Freelance Videographer & Graphic Designer",
     place: "Proyek mandiri",
     story: "DoP & editor video profil Teknik Informatika, video profil PT Lemonada, video Program Ketahanan Pangan Kementerian Imigrasi dan Pemasyarakatan RI, sampai iklan komersial.",
   },
   {
-    period: "2023 — 2025",
+    period: "2023 – 2025",
     role: "Reporter & Jurnalis Foto",
     place: "LPM Suaka",
-    story: "Meliput aksi buruh di Gedung Sate, aksi damai bela Palestina, sampai kebakaran pabrik di Cibiru. Sekaligus editor dokumenter untuk kanal YouTube Suaka.",
+    story: "Liputan foto yang paling aku ingat: aksi buruh di Gedung Sate, aksi bela Palestina, dan kebakaran pabrik tekstil di Cibiru. Aku juga mengedit dokumenter untuk kanal YouTube Suaka.",
   },
   {
-    period: "Des 2023 — Jun 2025",
+    period: "Des 2023 – Jun 2025",
     role: "Cameraman, Editor → PIC Video Production",
     place: "SAKTI Podcast",
-    story: "Mulai dari pegang kamera dan edit tiap episode, lalu dipercaya memimpin divisi produksi: bagi tim, atur jadwal, dan quality control sebelum tayang.",
+    story: "Awalnya pegang kamera dan edit tiap episode. Setahun kemudian aku memimpin divisi produksi video dan mengecek setiap episode sebelum tayang.",
   },
   {
-    period: "Nov 2024 — Nov 2025",
+    period: "Nov 2024 – Nov 2025",
     role: "Ketua",
     place: "Ruang Grafis",
-    story: "Menjaga komunitas desain tetap hidup dan membuka kelas dasar UI/UX untuk anggota.",
+    story: "Mengurus anggota komunitas desain dan mengajar kelas dasar UI/UX.",
   },
   {
-    period: "Mar 2025 — Jan 2026",
+    period: "Mar 2025 – Jan 2026",
     role: "Lead of KOMINFO Division",
     place: "HIMATIF UIN SGD Bandung",
     story: "Memegang media sosial dan identitas visual himpunan, dari feed rutin sampai maskot IT Fair XIII.",
   },
   {
-    period: "Sep 2025 — sekarang",
+    period: "Sep 2025 – sekarang",
     role: "Creative Director",
     place: "SABIT Community",
-    story: "Memimpin kampanye digital dan materi edukasi supaya nilai SABIT tersampaikan jelas ke mitra dan mahasiswa.",
+    story: "Mengurus kampanye digital, identitas visual, dan materi belajar SABIT.",
   },
   {
-    period: "Nov 2025 — sekarang",
+    period: "Nov 2025 – sekarang",
     role: "Business Development IT Support",
     place: "PT Len Industri (Persero)",
-    story: "Menerjemahkan spesifikasi teknis jadi presentasi dan proposal level eksekutif yang gampang dicerna.",
+    story: "Menganalisis spesifikasi produk dan pesaingnya, lalu menyusunnya jadi presentasi dan proposal tender.",
   },
 ];
 

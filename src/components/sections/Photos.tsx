@@ -40,9 +40,9 @@ export function Photos() {
   return (
     <RevealSection className="relative overflow-clip bg-canvas py-24 md:py-32" ariaLabel="Fotografi">
       <div className="mx-auto mb-14 flex max-w-[1440px] flex-col gap-6 px-4 md:flex-row md:items-end md:justify-between md:px-8">
-        <SectionHeading index="04" eyebrow="Lewat lensa" title={<>Mata yang<br /><span className="text-terracotta">terlatih.</span></>} />
+        <SectionHeading index="04" eyebrow="Lewat lensa" title={<>Dari balik<br /><span className="text-terracotta">kamera.</span></>} />
         <p className="max-w-sm text-ink-body" data-reveal>
-          Sebelum jadi editor, aku belajar dari balik kamera: jurnalis foto, landscape Manglayang, sampai momen Agustusan.
+          Landscape Manglayang, lomba Agustusan, dan latihan teknik kamera. Klik foto untuk lihat ukuran penuh.
         </p>
       </div>
 
@@ -84,7 +84,7 @@ export function Photos() {
           <figure className="bg-navy-deep p-3 md:p-4">
             <Image
               src={active.image.src}
-              alt={`${active.title} — ${active.caption}`}
+              alt={`${active.title}, ${active.caption}`}
               width={active.image.w}
               height={active.image.h}
               sizes="100vw"
@@ -92,7 +92,7 @@ export function Photos() {
             />
             <figcaption className="px-2 pt-4 text-ink-inverse">
               <span className="font-bold">{active.title}</span>
-              <span className="text-ink-inverse/75"> — {active.caption}</span>
+              <span className="text-ink-inverse/75">, {active.caption}</span>
             </figcaption>
           </figure>
         ) : null}

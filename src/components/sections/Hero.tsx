@@ -14,10 +14,10 @@ const pick = (id: string) => works.find((w) => w.id === id)!;
 
 /** Sticker layout around the portrait. `speed` drives parallax depth (higher = closer to camera). */
 const stickers = [
-  { work: pick("ruang-disen"), tilt: -6, speed: 1.4, pos: "left-[3%] top-[30%] w-[22vw] max-w-[230px] md:left-[8%] md:top-[18%] md:w-[13vw]", mobile: true },
-  { work: pick("nyetor-sewa-motor"), tilt: 5, speed: 1.9, pos: "right-[3%] top-[22%] w-[20vw] max-w-[200px] md:right-[9%] md:top-[12%] md:w-[11vw]", mobile: true },
-  { work: pick("maskot-it-fair"), tilt: -3, speed: 1.2, pos: "right-[6%] bottom-[16%] w-[18vw] max-w-[260px] md:w-[16vw]", mobile: false },
-  { work: pick("kartu-nama-renita"), tilt: 4, speed: 2.2, pos: "left-[6%] bottom-[20%] w-[16vw] max-w-[240px] md:w-[15vw]", mobile: false },
+  { work: pick("ruang-disen"), tilt: -6, speed: 1.4, pos: "left-[3%] top-[30%] w-[22vw] max-w-[230px] md:left-[8%] md:top-[18%] md:w-[13vw]", mobile: true, cutout: false },
+  { work: pick("nyetor-sewa-motor"), tilt: 5, speed: 1.9, pos: "right-[3%] top-[22%] w-[20vw] max-w-[200px] md:right-[9%] md:top-[12%] md:w-[11vw]", mobile: true, cutout: false },
+  { work: pick("maskot-rusa"), tilt: 4, speed: 1.2, pos: "right-[5%] bottom-[14%] w-[13vw] max-w-[200px]", mobile: false, cutout: true },
+  { work: pick("kartu-nama-renita"), tilt: 4, speed: 2.2, pos: "left-[6%] bottom-[20%] w-[16vw] max-w-[240px] md:w-[15vw]", mobile: false, cutout: false },
 ];
 
 export function Hero() {
@@ -118,7 +118,7 @@ export function Hero() {
       </div>
 
       {/* Stage: name (back) → portrait (mid) → stickers (front) */}
-      <div className="relative min-h-[64svh] flex-1 md:min-h-[70svh]">
+      <div className="relative min-h-[54svh] flex-1 md:min-h-[70svh]">
         <h1 data-hero-name className="absolute inset-x-0 top-[2%] z-0 select-none text-center md:top-[4%]">
           <span className="sr-only">{site.name}, {site.role} dari {site.city}</span>
           <span aria-hidden="true" className="display block text-[clamp(4rem,20vw,15rem)] leading-[0.86]">
@@ -156,10 +156,22 @@ export function Hero() {
           </div>
         </div>
 
-        {stickers.map(({ work, tilt, speed, pos, mobile }) => (
+        {stickers.map(({ work, tilt, speed, pos, mobile, cutout }) => (
           <div key={work.id} data-hero-sticker-wrap data-speed={speed} className={`absolute z-20 ${pos} ${mobile ? "" : "hidden md:block"}`}>
             <div data-hero-sticker>
-              <StickerCard image={work.image} alt={`${work.title} — ${work.client}`} tag={work.tag} tilt={tilt} sizes="(min-width: 768px) 16vw, 22vw" />
+              {cutout ? (
+                <Image
+                  src={work.image.src}
+                  alt={`${work.title}, ${work.client}`}
+                  width={work.image.w}
+                  height={work.image.h}
+                  sizes="13vw"
+                  className="h-auto w-full drop-shadow-[0_14px_18px_rgba(22,43,77,0.3)]"
+                  style={{ rotate: `${tilt}deg` }}
+                />
+              ) : (
+                <StickerCard image={work.image} alt={`${work.title}, ${work.client}`} tag={work.tag} tilt={tilt} sizes="(min-width: 768px) 16vw, 22vw" />
+              )}
             </div>
           </div>
         ))}
@@ -167,16 +179,16 @@ export function Hero() {
 
       {/* Diagonal navy band */}
       <div className="relative z-30 -mt-14 bg-navy-deep text-ink-inverse md:-mt-20" style={{ clipPath: "polygon(0 22%, 100% 0, 100% 100%, 0 100%)" }}>
-        <div className="mx-auto grid max-w-[1440px] gap-6 px-4 pb-8 pt-16 md:grid-cols-[1.4fr_1fr] md:items-end md:px-8 md:pb-10 md:pt-24">
-          <p data-hero-fade className="max-w-xl text-lg leading-relaxed text-ink-inverse/90 md:text-xl">
+        <div className="mx-auto grid max-w-[1440px] gap-5 px-4 pb-7 pt-14 md:grid-cols-[1.4fr_1fr] md:items-end md:px-8 md:pb-10 md:pt-24">
+          <p data-hero-fade className="max-w-xl text-[0.95rem] leading-relaxed text-ink-inverse/90 sm:text-lg md:text-xl">
             {site.intro}
           </p>
-          <div data-hero-fade className="flex flex-wrap items-center gap-3 md:justify-end">
-            <MagneticLink href="#karya" variant="light">
-              Lihat karyaku <ArrowDown size={16} />
+          <div data-hero-fade className="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap sm:items-center md:justify-end">
+            <MagneticLink href="#karya" variant="light" className="!px-3 sm:!px-6">
+              Lihat karyaku <ArrowDown size={16} className="hidden min-[400px]:block" />
             </MagneticLink>
-            <MagneticLink href={site.whatsapp.href} target="_blank" rel="noopener noreferrer" variant="accent">
-              Yuk, ngobrol dulu! <ArrowUpRight size={16} />
+            <MagneticLink href={site.whatsapp.href} target="_blank" rel="noopener noreferrer" variant="accent" className="!px-3 sm:!px-6">
+              <span className="whitespace-nowrap">Yuk, ngobrol dulu!</span> <ArrowUpRight size={16} className="hidden min-[400px]:block" />
             </MagneticLink>
           </div>
         </div>

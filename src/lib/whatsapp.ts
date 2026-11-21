@@ -31,7 +31,7 @@ export function briefMessage(selection: Selection, note = ""): string {
     return "Halo Kak Ridlo! Aku mau ngobrol soal desain/video. Boleh tanya-tanya dulu?";
   }
   const rows = lines.map(
-    (l) => `• ${l.item.name} × ${l.qty} /${l.item.unit} — ${formatRupiah(l.subtotal)}${l.item.priceMax || l.item.startFrom ? " (mulai)" : ""}`,
+    (l) => `• ${l.item.name} × ${l.qty} /${l.item.unit}: ${formatRupiah(l.subtotal)}${l.item.priceMax || l.item.startFrom ? " (mulai)" : ""}`,
   );
   return [
     "Halo Kak Ridlo! Aku mau pesan:",
